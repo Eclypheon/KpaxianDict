@@ -13,21 +13,23 @@ A progressive web application (PWA) dictionary and archaeological field guide do
 
 ## ✨ Features
 
-- **📖 Complete Lexicography**: Over 40 deciphered K-PAXian lexemes (`ting`, `stutudo`, `bbychubi`, `connec`, `mimbly mumbly`, `notti`, `scenary`, `twinkly twonkly`, `EXTERMINATE`, etc.).
-- **🗣️ IPA Phonetic Transcriptions**: Accurate phonetic notation for each word (e.g. `/stʊˈtuːdoʊ/`, `/ˈbeɪbiˌtʃuːbi/`) with one-click synthetic vocalization.
-- **⚡ Morphological Conjugations**: Detailed tables showing tenses, continuous aspect, plurals, augmentatives (`MASSIV ...`), diminutives (`lil ...`), and imperatives.
-- **📜 Archaeological Excavation Notes**: Fictitious historical field logs with dates, recovery sites, and scientific controversies (e.g. "Deciphered on 12 June 2023 from an obsidian cylinder seal excavated near the southern rings of K-PAX").
-- **🪐 Fictitious Etymology**: Historical linguistics linking words to Olde K-PAX roots, nomadic dialects from the Spoon Planet, and intercepted Earth radio waves.
+- **📖 60 Canonical Archaeological Lexemes**: Full vocabulary extracted from planetary dispatches and `bbylangpack` (`stutudo`, `bbychubi`, `ting`, `MASSIV ting`, `connec`, `autism connec`, `fren cluster`, `bbyalien`, `grass patch`, `grazing grass`, `red orb`, `holo reel`, `sun cycle`, `dark orbit`, `alien equipment`, `whispering`, `wad ting?`, `mimbly mumbly`, `notti`, `scenary`, `twinkly twonkly`, `EXTERMINATE`, etc.).
+- **☰ Off-Canvas Planetary Nav-Console & Full Lexicon Browser**: Comprehensive slide-out drawer providing an alphabetical A-Z index of all 60 words with quick search filter, instant card jumps, and detailed record inspection.
+- **🗣️ IPA Phonetic Transcriptions**: International Phonetic Alphabet transcriptions (e.g. `/stʊˈtuːdoʊ/`, `/ˈbeɪbiˌtʃuːbi/`, `/frɛn ˈklʌs.tər/`) with one-click synthetic vocalization via the Web Speech API.
+- **⚡ Morphological Conjugations**: Detailed tables displaying grammatical inflection (present, continuous aspect, past, imperatives, plurals, augmentatives like `MASSIV ting`, and diminutives like `lil ting`).
+- **📜 Archaeological Excavation Notes**: Decipherment records with dates, excavation sites (Cydonia Basin Sector 9, Lake Mimble, Sunken Observatory of Zephyr, Mount Stutudo), and scholarly controversies.
+- **🪐 Fictitious Etymologies**: Historical linguistic roots tracing Proto-Kpaxian origins, Spoon Planet nomadic cognates, and 20th-century Earth radio borrowings.
+- **💬 Attested Dispatches in Spacetime**: Authentic K-PAXian dispatches with English translations.
 - **🎨 4 Atmospheric Visual Themes**:
   1. **🌸 Cute Pastel Pink** (Default): Gentle strawberry milk, blush rose, and playful softness.
   2. **☕ Cappuccino Mocha**: Velvety espresso, toasted almond, and cozy scholarly serif typography.
   3. **🧛 Dracula**: Dark gothic purple, glowing cyan accents, and midnight canvas.
   4. **⚡ Cyberpunkish**: High-voltage neon yellow, electric cyan, and dark obsidian geometry.
-- **🎲 Random Theme Auto-Rotation & Lock**: Themes rotate randomly on new visits unless locked in the Theme Settings modal (persisted in `localStorage`).
-- **🌟 Word of the Day (WOTD)**: Automatically switches every midnight based on the planetary calendar date, complete with a live countdown timer until the next orbit.
+- **🎲 Decoupled Theme Selector & Standalone Auto-Rotate Toggle**: Choose your theme directly without altering auto-rotate settings; toggle auto-rotate independently with dedicated top-bar and drawer controls.
+- **🌟 Word of the Day (WOTD)**: Changes automatically every midnight based on the planetary calendar date, complete with an active live countdown timer until the next orbit (`Next orbit in Xh Ym Zs`).
 - **🔍 Real-Time Search & Category Filters**: Search across words, definitions, IPA, and archaeological notes with filtering by Part of Speech.
-- **🎲 Random Word Discovery**: Interactive dice button to discover serendipitous planetary concepts.
-- **📱 PWA & Offline Support**: Fully installable on iOS and Android home screens, with background caching via Service Worker.
+- **🎲 Random Word Discovery**: Interactive dice button with rolling animation to discover serendipitous planetary concepts.
+- **📱 PWA & Offline Support**: Fully installable on iOS and Android home screens, with background caching via Service Worker and zero CORS issues on `file://`.
 
 ---
 
@@ -46,19 +48,17 @@ A progressive web application (PWA) dictionary and archaeological field guide do
 
 ---
 
-## 🏗️ Local Development
+## 🏗️ Local Usage
 
-Simply serve the directory with any static file server:
+You can open `index.html` directly in your browser (`file:///...`) or serve with any static server:
 
 ```bash
-# Using Python
+# Direct double-click in macOS Finder or:
+open index.html
+
+# Using Python HTTP Server:
 python3 -m http.server 8080
-
-# Using Node.js
-npx serve .
 ```
-
-Open `http://localhost:8080` in your web browser.
 
 ---
 

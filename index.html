@@ -2,11 +2,11 @@
 <html lang="en" data-theme="pastel-pink">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>K-PAXian Dictionary | Planetary Lexicon & Field Guide</title>
   
   <!-- Meta & SEO -->
-  <meta name="description" content="Official Archaeological Lexicon & Linguistic Field Database of the K-PAXian alien language. Complete with IPA phonetics, part of speech, conjugations, etymology, and research excavation logs.">
+  <meta name="description" content="Official Archaeological Lexicon & Linguistic Field Database of the K-PAXian alien language. Complete with IPA phonetics, conjugations, etymology, and research excavation logs.">
   <meta name="theme-color" content="#ffd1dc">
   
   <!-- iOS PWA meta -->
@@ -25,23 +25,137 @@
 </head>
 <body>
 
+  <!-- Off-Canvas Sidebar / Navigation Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+  <aside class="planetary-drawer" id="planetaryDrawer" aria-label="Planetary Navigation Console">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <span class="drawer-icon">🪐</span>
+        <div>
+          <h2 class="drawer-title">Planetary Nav-Console</h2>
+          <p class="drawer-subtitle">Exo-Linguistic Archives • Sector 4</p>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="btnCloseDrawer" aria-label="Close navigation menu">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <!-- Quick Actions -->
+      <section class="drawer-section">
+        <h3 class="drawer-heading">Discovery & Orbits</h3>
+        <div class="drawer-actions-grid">
+          <button class="drawer-action-btn" id="drawerBtnRandom">
+            <span class="action-icon">🎲</span>
+            <div class="action-meta">
+              <span class="action-label">Random Lexeme</span>
+              <span class="action-desc">Roll holographic dice</span>
+            </div>
+          </button>
+          <button class="drawer-action-btn" id="drawerBtnWotd">
+            <span class="action-icon">🌟</span>
+            <div class="action-meta">
+              <span class="action-label">Word of the Orbit</span>
+              <span class="action-desc">Jump to today's active word</span>
+            </div>
+          </button>
+          <button class="drawer-action-btn" id="drawerBtnAudioTest">
+            <span class="action-icon">🔊</span>
+            <div class="action-meta">
+              <span class="action-label">Audio Synth Test</span>
+              <span class="action-desc">Test acoustic frequencies</span>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- Separate Visual Spectrum (Themes) -->
+      <section class="drawer-section">
+        <div class="section-title-row">
+          <h3 class="drawer-heading">Visual Spectrum (Theme)</h3>
+          <span class="section-pill" id="currentThemePill">Pastel Pink</span>
+        </div>
+        <div class="drawer-themes-grid" id="drawerThemesGrid">
+          <!-- Populated via JS -->
+        </div>
+      </section>
+
+      <!-- Standalone Auto-Rotate Toggle -->
+      <section class="drawer-section">
+        <div class="drawer-toggle-card">
+          <div class="toggle-text-group">
+            <h4 class="toggle-title">Auto-Rotate Spectrum</h4>
+            <p class="toggle-desc">Rolls a random planetary theme on every new orbit or reload</p>
+          </div>
+          <label class="switch" for="drawerAutoRotateToggle">
+            <input type="checkbox" id="drawerAutoRotateToggle" aria-label="Toggle theme auto rotation">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Full Planetary Lexicon Browser (A-Z) -->
+      <section class="drawer-section browser-section">
+        <div class="section-title-row">
+          <h3 class="drawer-heading">Browse Full Lexicon</h3>
+          <span class="lexeme-count-badge" id="browserCountBadge">60 Words</span>
+        </div>
+        <div class="browser-search-box">
+          <span class="search-ico">🔍</span>
+          <input 
+            type="text" 
+            id="browserSearchInput" 
+            class="browser-search-input" 
+            placeholder="Quick search full lexicon..." 
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button class="browser-clear-btn" id="browserClearBtn" title="Clear filter">✕</button>
+        </div>
+        <div class="lexicon-browser-list" id="lexiconBrowserList">
+          <!-- Populated via JS with all 60 words -->
+        </div>
+      </section>
+    </div>
+  </aside>
+
   <!-- Sticky Header Bar -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="#" class="brand-section">
-        <div class="brand-icon">🪐</div>
-        <div class="brand-text">
-          <h1>K-PAXian Dictionary</h1>
-          <p>Exo-Linguistic Archives • Sector 4</p>
-        </div>
-      </a>
+      <div class="header-left">
+        <button class="nav-drawer-toggle" id="btnToggleDrawer" aria-label="Open planetary menu and full lexicon browser">
+          <span class="hamburger-icon">☰</span>
+          <span class="menu-label">Browse Lexicon</span>
+          <span class="menu-badge" id="headerWordCountBadge">60</span>
+        </button>
 
-      <!-- Theme Controls -->
+        <a href="#" class="brand-section" title="K-PAXian Archaeological Field Guide">
+          <div class="brand-icon">🪐</div>
+          <div class="brand-text">
+            <h1>K-PAXian Dictionary</h1>
+            <p>Sector 4 Field Archives</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Header Controls: Separated Theme Selector & Auto-Rotate Toggle -->
       <div class="header-controls">
-        <button class="theme-pill-btn" id="btnOpenThemeModal" title="Change Visual Theme">
-          <span id="themePillIcon">🌸</span>
-          <span id="themePillLabel">Pastel Pink</span>
-          <span class="lock-badge" id="themeLockIndicator">🎲 Auto-Rotate</span>
+        <!-- Separate Theme Selector Button -->
+        <button class="theme-selector-btn" id="btnOpenThemeModal" title="Select Visual Planetary Spectrum">
+          <span id="themeBtnIcon">🌸</span>
+          <span id="themeBtnLabel" class="btn-text-hide-mobile">Pastel Pink</span>
+          <span class="dropdown-chevron">▼</span>
+        </button>
+
+        <!-- Separate Standalone Auto-Rotate Toggle Button -->
+        <button class="auto-rotate-pill-btn" id="btnToggleAutoRotate" title="Toggle Auto-Rotate Themes on Visit">
+          <span class="auto-rotate-icon">🎲</span>
+          <span id="autoRotateLabel">Auto: ON</span>
+        </button>
+
+        <!-- Quick Random Word Button -->
+        <button class="btn-random-quick" id="btnQuickRandom" title="Roll Random Planetary Lexeme">
+          <span class="dice-icon">🎲</span>
+          <span class="btn-text-hide-mobile">Random</span>
         </button>
       </div>
     </div>
@@ -51,10 +165,13 @@
   <main class="app-container">
 
     <!-- Word of the Day (WOTD) Hero -->
-    <section class="wotd-section">
+    <section class="wotd-section" id="wotdSection">
       <div class="wotd-card">
         <div class="wotd-header">
-          <span class="wotd-label">🌟 Lexeme of this Orbit (WOTD)</span>
+          <div class="wotd-badge-group">
+            <span class="wotd-label">🌟 Lexeme of this Orbit (WOTD)</span>
+            <span class="planetary-status-tag">Live Sector 4 Telemetry</span>
+          </div>
           <span class="wotd-timer" id="wotdTimer">Next orbit in --:--:--</span>
         </div>
 
@@ -62,13 +179,15 @@
           <div class="word-row">
             <h2 class="word-title" id="wotdWord">stutudo</h2>
             <span class="word-ipa" id="wotdIpa">/stʊˈtuːdoʊ/</span>
-            <button class="btn-speak" id="btnWotdSpeak" style="font-size: 1.25rem;" title="Listen to pronunciation">🔊</button>
+            <button class="btn-speak" id="btnWotdSpeak" title="Synthesize phonetic pronunciation">🔊</button>
             <span class="pos-badge" id="wotdPos" data-pos="verb">verb</span>
           </div>
 
           <p class="wotd-definition" id="wotdDef">
             To compose, type, write, or express thought through rhythmic tentacle pulsing.
           </p>
+
+          <p class="wotd-ext-definition" id="wotdExtDef"></p>
 
           <div class="wotd-meta">
             <div class="meta-box">
@@ -79,6 +198,12 @@
               <div class="meta-title">📜 Archaeological Excavation Log</div>
               <p class="meta-content" id="wotdResearch"></p>
             </div>
+          </div>
+
+          <div class="wotd-actions">
+            <button class="btn-inspect-dossier" id="btnWotdInspect">
+              📜 Inspect Full Archival Dossier & Conjugations ↗
+            </button>
           </div>
         </div>
       </div>
@@ -93,7 +218,7 @@
             type="text" 
             id="searchInput" 
             class="search-input" 
-            placeholder="Search K-PAXian words, definitions, IPA, or archaeological lore..." 
+            placeholder="Search 60+ K-PAXian words, definitions, IPA phonetics, or archaeological lore..." 
             autocomplete="off"
             spellcheck="false"
           >
@@ -115,7 +240,11 @@
     <!-- Results Status Bar -->
     <div class="results-info-bar">
       <span id="resultsCount">Loading extraterrestrial archives...</span>
-      <span>4 Aesthetic Themes • 100% Offline PWA</span>
+      <div class="results-tags-meta">
+        <span class="meta-chip">4 Planetary Themes</span>
+        <span class="meta-chip">100% Offline PWA</span>
+        <span class="meta-chip">Web Speech Audio</span>
+      </div>
     </div>
 
     <!-- Dictionary Word Cards Grid -->
@@ -125,65 +254,81 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <p>Deciphered by the Interstellar Department of Exo-Linguistic Studies.</p>
-      <p style="margin-top: 0.35rem;">
-        K-PAXian Dictionary PWA • Repository: <a href="https://github.com/Eclypheon/KpaxianDict" target="_blank" rel="noopener">Eclypheon/KpaxianDict</a>
-      </p>
+      <div class="footer-inner">
+        <p><strong>K-PAXian Planetary Lexicon & Archaeological Database</strong></p>
+        <p>Deciphered by the Interstellar Department of Exo-Linguistic Studies, Sector 4.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+          60 Canonical Lexemes • Compatible with offline PWA, mobile terminals & desktop observatories.
+        </p>
+      </div>
     </footer>
 
   </main>
 
   <!-- Theme Selection Modal -->
-  <div class="modal-overlay" id="themeModal">
+  <div class="modal-overlay" id="themeModal" aria-hidden="true">
     <div class="modal-card">
       <div class="modal-header">
         <h3 class="modal-title">Atmospheric Themes</h3>
-        <button class="modal-close-btn" id="btnCloseThemeModal">✕</button>
+        <button class="modal-close-btn" id="btnCloseThemeModal" aria-label="Close theme selection">✕</button>
       </div>
 
-      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.25rem;">
-        Choose your visual planetary spectrum. By default, themes automatically rotate on new visits unless you lock your preference.
+      <p class="modal-desc">
+        Select your planetary visual spectrum. Your choice is saved immediately without altering your auto-rotation preference.
       </p>
 
       <div class="theme-options-grid" id="themeOptions">
         <!-- Injected via JS -->
       </div>
 
-      <div class="lock-toggle-row">
-        <div class="lock-toggle-text">
-          <h4>Lock Chosen Theme</h4>
-          <p>Prevent auto-rotation across orbital sessions</p>
+      <div class="theme-modal-footer">
+        <div class="theme-footer-autorotate">
+          <div class="toggle-text-group">
+            <span class="toggle-name">Auto-Rotate on New Orbits</span>
+            <span class="toggle-sub">Random theme on each visit</span>
+          </div>
+          <label class="switch" for="modalAutoRotateToggle">
+            <input type="checkbox" id="modalAutoRotateToggle">
+            <span class="slider"></span>
+          </label>
         </div>
-        <label class="switch">
-          <input type="checkbox" id="lockToggle">
-          <span class="slider"></span>
-        </label>
       </div>
     </div>
   </div>
 
-  <!-- Word Detail Modal -->
-  <div class="modal-overlay" id="wordDetailModal">
-    <div class="modal-card" style="max-width: 650px; max-height: 90vh; overflow-y: auto;">
+  <!-- Word Detail Modal ("Archival Field Record") -->
+  <div class="modal-overlay" id="wordDetailModal" aria-hidden="true">
+    <div class="modal-card word-modal-card">
       <div class="modal-header">
-        <span style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted);">
-          📜 Archival Field Record
+        <span class="modal-dossier-tag">
+          📜 Archival Field Record • Sector 4
         </span>
-        <button class="modal-close-btn" id="btnDetailClose">✕</button>
+        <button class="modal-close-btn" id="btnDetailClose" aria-label="Close word details">✕</button>
       </div>
-      <div id="detailModalBody">
-        <!-- Rendered on card click -->
+      <div class="detail-modal-body" id="detailModalBody">
+        <!-- Rendered on card click or random roll -->
       </div>
     </div>
   </div>
+
+  <!-- Audio Toast Notification -->
+  <div class="app-toast" id="appToast" aria-live="polite"></div>
 
   <!-- PWA Install Banner -->
   <div class="pwa-install-banner" id="pwaInstallBanner">
-    <span>🪐 Install K-PAXian Dictionary to home screen</span>
-    <button class="btn-install" id="btnInstallApp">Install</button>
+    <div class="banner-text">
+      <span class="banner-icon">🪐</span>
+      <span>Install <strong>K-PAXian Dictionary</strong> to home screen for 100% offline access</span>
+    </div>
+    <div class="banner-buttons">
+      <button class="btn-install" id="btnInstallApp">Install PWA</button>
+      <button class="btn-dismiss-install" id="btnDismissInstall">✕</button>
+    </div>
   </div>
 
-  <!-- JavaScript Module -->
-  <script type="module" src="js/app.js"></script>
+  <!-- Universal JavaScript: Loaded sequentially with standard tags for zero CORS issues on file:// -->
+  <script src="js/dictionary-data.js"></script>
+  <script src="js/theme-manager.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

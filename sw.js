@@ -3,16 +3,16 @@
  * Enables 100% offline usage and rapid caching of PWA assets.
  */
 
-const CACHE_NAME = "kpax-dict-v1";
+const CACHE_NAME = "kpax-dict-v2";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
   "./manifest.json",
   "./css/themes.css",
   "./css/main.css",
-  "./js/app.js",
   "./js/dictionary-data.js",
   "./js/theme-manager.js",
+  "./js/app.js",
   "./icons/icon.svg"
 ];
 
@@ -40,15 +40,13 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-// Fetch event (Cache-first with network fallback)
+// Fetch event (Stale-while-revalidate with cache fallback)
 self.addEventListener("fetch", (event) => {
-  // Only cache GET requests
   if (event.request.method !== "GET") return;
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
-        // Return cached and update in background (stale-while-revalidate)
         fetch(event.request).then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
             caches.open(CACHE_NAME).then((cache) => {
@@ -58,15 +56,22 @@ self.addEventListener("fetch", (event) => {
         }).catch(() => {});
         return cachedResponse;
       }
-      return fetch(event.request).then((response) => {
-        if (!response || response.status !== 200 || response.type !== "basic") {
-          return response;
+
+      return fetch(event.request).then((networkResponse) => {
+        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== "basic") {
+          return networkResponse;
         }
-        const responseToCache = response.clone();
+
+        const responseToCache = networkResponse.clone();
         caches.open(CACHE_NAME).then((cache) => {
           cache.put(event.request, responseToCache);
         });
-        return response;
+
+        return networkResponse;
+      }).catch(() => {
+        if (event.request.headers.get("accept")?.includes("text/html")) {
+          return caches.match("./index.html");
+        }
       });
     })
   );

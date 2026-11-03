@@ -1,74 +1,83 @@
 /**
  * K-PAXian Dictionary - Theme Manager
- * Supports:
- * - Cute Pastel Pink (Default)
+ * Supports 4 planetary visual spectrums:
+ * - Cute Pastel Pink (Default Fallback)
  * - Cappuccino Mocha
  * - Dracula
- * - Cyberpunk
+ * - Cyberpunkish
  * 
- * Auto-rotates randomly unless the user sets a fixed/locked theme in localStorage.
+ * Theme selection is strictly decoupled from the Auto-Rotate toggle:
+ * - Theme Selector: Sets the current active planetary spectrum.
+ * - Auto-Rotate: When enabled (default: true for new visitors), automatically rolls a
+ *   random theme upon new orbital visits/sessions. When disabled, locks to the selected theme.
  */
 
-export const THEMES = [
+const THEMES = [
   {
     id: "pastel-pink",
     name: "Cute Pastel Pink",
     icon: "🌸",
-    description: "Gentle strawberry milk, soft blush, and playful warmth"
+    description: "Gentle strawberry milk, soft blush, and playful warmth",
+    color: "#ffd1dc"
   },
   {
     id: "mocha",
     name: "Cappuccino Mocha",
     icon: "☕",
-    description: "Velvety espresso, toasted almond, and cozy study tones"
+    description: "Velvety espresso, toasted almond, and cozy study tones",
+    color: "#3b2f2f"
   },
   {
     id: "dracula",
     name: "Dracula",
     icon: "🧛",
-    description: "Vampiric dark purple, glowing cyan, and midnight atmosphere"
+    description: "Vampiric dark purple, glowing cyan, and midnight atmosphere",
+    color: "#282a36"
   },
   {
     id: "cyberpunk",
     name: "Cyberpunkish",
     icon: "⚡",
-    description: "High-voltage neon yellow, cyan circuitry, and deep obsidian"
+    description: "High-voltage neon yellow, cyan circuitry, and deep obsidian",
+    color: "#0b0c10"
   }
 ];
 
 const STORAGE_KEY_THEME = "kpax_theme_preference";
-const STORAGE_KEY_LOCKED = "kpax_theme_locked";
+const STORAGE_KEY_AUTOROTATE = "kpax_theme_autorotate";
 
-export class ThemeManager {
+class ThemeManager {
   constructor(onThemeChangeCallback = null) {
-    this.onThemeChange = onThemeChangeCallback;
     this.currentTheme = "pastel-pink";
-    this.isLocked = false;
+    this.autoRotate = false;
     this.init();
+    this.onThemeChange = onThemeChangeCallback;
   }
 
   init() {
     try {
-      const storedLocked = localStorage.getItem(STORAGE_KEY_LOCKED);
+      const storedAutoRotate = localStorage.getItem(STORAGE_KEY_AUTOROTATE);
       const storedTheme = localStorage.getItem(STORAGE_KEY_THEME);
 
-      this.isLocked = storedLocked === "true";
-
-      if (this.isLocked && storedTheme && THEMES.some(t => t.id === storedTheme)) {
-        this.currentTheme = storedTheme;
+      // Default autoRotate to true only if never explicitly set by user
+      if (storedAutoRotate === null) {
+        this.autoRotate = true;
       } else {
-        // Auto-rotate randomly on visit if not locked!
+        this.autoRotate = storedAutoRotate === "true";
+      }
+
+      if (this.autoRotate) {
+        // Roll random theme on fresh session
         const randomIndex = Math.floor(Math.random() * THEMES.length);
         this.currentTheme = THEMES[randomIndex].id;
-        // Do not lock, but store current choice
-        if (!this.isLocked) {
-          localStorage.setItem(STORAGE_KEY_THEME, this.currentTheme);
-        }
+      } else if (storedTheme && THEMES.some(t => t.id === storedTheme)) {
+        this.currentTheme = storedTheme;
+      } else {
+        this.currentTheme = "pastel-pink";
       }
     } catch (e) {
-      // LocalStorage unavailable, fallback to default
       this.currentTheme = "pastel-pink";
-      this.isLocked = false;
+      this.autoRotate = false;
     }
 
     this.applyTheme(this.currentTheme);
@@ -80,59 +89,52 @@ export class ThemeManager {
     }
     this.currentTheme = themeId;
     document.documentElement.setAttribute("data-theme", themeId);
-    
-    // Update theme-color meta tag for PWA chrome
-    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-    if (themeColorMeta) {
-      const colors = {
-        "pastel-pink": "#ffd1dc",
-        "mocha": "#3b2f2f",
-        "dracula": "#282a36",
-        "cyberpunk": "#0b0c10"
-      };
-      themeColorMeta.setAttribute("content", colors[themeId] || "#ffd1dc");
-    }
 
-    if (this.onThemeChange) {
-      this.onThemeChange({
-        theme: themeId,
-        isLocked: this.isLocked
-      });
-    }
-  }
-
-  setTheme(themeId, lock = true) {
-    this.isLocked = lock;
-    this.applyTheme(themeId);
+    // Save active theme preference without modifying autoRotate setting
     try {
-      localStorage.setItem(STORAGE_KEY_THEME, themeId);
-      localStorage.setItem(STORAGE_KEY_LOCKED, String(this.isLocked));
-    } catch (e) {
-      console.warn("Could not save theme preference to localStorage", e);
-    }
-  }
-
-  toggleLock() {
-    this.isLocked = !this.isLocked;
-    try {
-      localStorage.setItem(STORAGE_KEY_LOCKED, String(this.isLocked));
       localStorage.setItem(STORAGE_KEY_THEME, this.currentTheme);
     } catch (e) {
-      console.warn("Could not update lock state in localStorage", e);
+      console.warn("Could not persist theme to localStorage", e);
+    }
+
+    // Update meta theme-color tag for PWA / iOS mobile chrome
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      const themeObj = THEMES.find(t => t.id === themeId);
+      themeColorMeta.setAttribute("content", themeObj ? themeObj.color : "#ffd1dc");
+    }
+
+    if (this.onThemeChange) {
+      this.onThemeChange(this.getCurrentState());
+    }
+  }
+
+  setTheme(themeId) {
+    // Only sets theme; does NOT touch autoRotate toggle!
+    this.applyTheme(themeId);
+  }
+
+  setAutoRotate(enabled) {
+    this.autoRotate = Boolean(enabled);
+    try {
+      localStorage.setItem(STORAGE_KEY_AUTOROTATE, String(this.autoRotate));
+    } catch (e) {
+      console.warn("Could not save auto-rotate state", e);
     }
     if (this.onThemeChange) {
-      this.onThemeChange({
-        theme: this.currentTheme,
-        isLocked: this.isLocked
-      });
+      this.onThemeChange(this.getCurrentState());
     }
-    return this.isLocked;
+    return this.autoRotate;
+  }
+
+  toggleAutoRotate() {
+    return this.setAutoRotate(!this.autoRotate);
   }
 
   rotateRandom() {
     const available = THEMES.filter(t => t.id !== this.currentTheme);
     const next = available[Math.floor(Math.random() * available.length)];
-    this.applyTheme(next.id);
+    this.setTheme(next.id);
   }
 
   getAvailableThemes() {
@@ -140,10 +142,20 @@ export class ThemeManager {
   }
 
   getCurrentState() {
+    const info = THEMES.find(t => t.id === this.currentTheme) || THEMES[0];
     return {
       theme: this.currentTheme,
-      isLocked: this.isLocked,
-      info: THEMES.find(t => t.id === this.currentTheme) || THEMES[0]
+      autoRotate: this.autoRotate,
+      info
     };
   }
+}
+
+// Universal environment support
+if (typeof window !== "undefined") {
+  window.THEMES = THEMES;
+  window.ThemeManager = ThemeManager;
+}
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { THEMES, ThemeManager };
 }
