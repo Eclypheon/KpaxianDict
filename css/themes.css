@@ -1,0 +1,165 @@
+/**
+ * K-PAXian Dictionary - Theme System
+ * 4 Distinct Aesthetic Profiles:
+ * 1. Cute Pastel Pink (Default Fallback)
+ * 2. Cappuccino Mocha
+ * 3. Dracula
+ * 4. Cyberpunkish
+ */
+
+/* 1. CUTE PASTEL PINK (Default) */
+:root,
+[data-theme="pastel-pink"] {
+  --theme-id: "pastel-pink";
+  --bg-primary: #fff5f8;
+  --bg-secondary: #ffebf1;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fff9fb;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-input: #ffffff;
+  --bg-banner: linear-gradient(135deg, #ffe0ea 0%, #ffd1dc 100%);
+
+  --text-primary: #4a2835;
+  --text-secondary: #7e4b5f;
+  --text-muted: #a67588;
+  --text-accent: #ff5c8d;
+
+  --border-color: #f7cedb;
+  --border-hover: #ff9cb9;
+  --border-focus: #ff5c8d;
+
+  --accent-primary: #ff5c8d;
+  --accent-secondary: #ff8dae;
+  --accent-glow: rgba(255, 92, 141, 0.25);
+  --accent-surface: #ffe9f0;
+
+  --badge-noun: #ff7597;
+  --badge-verb: #b072e6;
+  --badge-adj: #50bda1;
+  --badge-interj: #ff9f43;
+  --badge-adverb: #48a9e6;
+
+  --shadow-card: 0 10px 25px -5px rgba(184, 86, 120, 0.12), 0 8px 10px -6px rgba(184, 86, 120, 0.08);
+  --shadow-glow: 0 0 20px rgba(255, 92, 141, 0.35);
+
+  --font-heading: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'Space Mono', SFMono-Regular, Consolas, monospace;
+}
+
+/* 2. CAPPUCCINO MOCHA */
+[data-theme="mocha"] {
+  --theme-id: "mocha";
+  --bg-primary: #211a17;
+  --bg-secondary: #2b221e;
+  --bg-card: #342a25;
+  --bg-card-hover: #3d312b;
+  --bg-glass: rgba(52, 42, 37, 0.9);
+  --bg-input: #261e1a;
+  --bg-banner: linear-gradient(135deg, #44352f 0%, #2e231e 100%);
+
+  --text-primary: #f5ece5;
+  --text-secondary: #d6c4b8;
+  --text-muted: #9e897d;
+  --text-accent: #e3a875;
+
+  --border-color: #4a3b34;
+  --border-hover: #73594e;
+  --border-focus: #e3a875;
+
+  --accent-primary: #e3a875;
+  --accent-secondary: #c98b58;
+  --accent-glow: rgba(227, 168, 117, 0.25);
+  --accent-surface: #42322a;
+
+  --badge-noun: #e3a875;
+  --badge-verb: #b38b72;
+  --badge-adj: #9bb58f;
+  --badge-interj: #d99374;
+  --badge-adverb: #84a9b5;
+
+  --shadow-card: 0 12px 28px -6px rgba(15, 11, 9, 0.45);
+  --shadow-glow: 0 0 22px rgba(227, 168, 117, 0.3);
+
+  --font-heading: 'Cinzel', 'Georgia', serif;
+  --font-body: 'Lora', 'Georgia', serif;
+  --font-mono: 'Courier Prime', monospace;
+}
+
+/* 3. DRACULA */
+[data-theme="dracula"] {
+  --theme-id: "dracula";
+  --bg-primary: #1e1f29;
+  --bg-secondary: #282a36;
+  --bg-card: #2e303e;
+  --bg-card-hover: #383a4c;
+  --bg-glass: rgba(46, 48, 62, 0.9);
+  --bg-input: #21222c;
+  --bg-banner: linear-gradient(135deg, #3d3159 0%, #282a36 100%);
+
+  --text-primary: #f8f8f2;
+  --text-secondary: #bfbfd4;
+  --text-muted: #6272a4;
+  --text-accent: #ff79c6;
+
+  --border-color: #44475a;
+  --border-hover: #bd93f9;
+  --border-focus: #50fa7b;
+
+  --accent-primary: #bd93f9;
+  --accent-secondary: #ff79c6;
+  --accent-glow: rgba(189, 147, 249, 0.35);
+  --accent-surface: #38314a;
+
+  --badge-noun: #ff79c6;
+  --badge-verb: #50fa7b;
+  --badge-adj: #8be9fd;
+  --badge-interj: #ffb86c;
+  --badge-adverb: #bd93f9;
+
+  --shadow-card: 0 12px 30px -5px rgba(10, 11, 16, 0.6);
+  --shadow-glow: 0 0 25px rgba(189, 147, 249, 0.4);
+
+  --font-heading: 'Fira Code', 'JetBrains Mono', monospace;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+/* 4. CYBERPUNK */
+[data-theme="cyberpunk"] {
+  --theme-id: "cyberpunk";
+  --bg-primary: #090a0f;
+  --bg-secondary: #12141f;
+  --bg-card: #171a28;
+  --bg-card-hover: #1f2336;
+  --bg-glass: rgba(23, 26, 40, 0.9);
+  --bg-input: #0e1019;
+  --bg-banner: linear-gradient(135deg, #1f1b0a 0%, #151928 100%);
+
+  --text-primary: #00ffff;
+  --text-secondary: #e6edff;
+  --text-muted: #5e6b8a;
+  --text-accent: #f7ee16;
+
+  --border-color: #29304a;
+  --border-hover: #00ffff;
+  --border-focus: #f7ee16;
+
+  --accent-primary: #f7ee16;
+  --accent-secondary: #00ffff;
+  --accent-glow: rgba(247, 238, 22, 0.4);
+  --accent-surface: #242211;
+
+  --badge-noun: #ff0055;
+  --badge-verb: #00ffff;
+  --badge-adj: #f7ee16;
+  --badge-interj: #ff7700;
+  --badge-adverb: #a200ff;
+
+  --shadow-card: 0 8px 32px 0 rgba(0, 255, 255, 0.15), inset 0 0 1px 1px rgba(0, 255, 255, 0.2);
+  --shadow-glow: 0 0 30px rgba(0, 255, 255, 0.5);
+
+  --font-heading: 'Orbitron', 'Chakra Petch', sans-serif;
+  --font-body: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}

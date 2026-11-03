@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pastel-pink">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>K-PAXian Dictionary | Planetary Lexicon & Field Guide</title>
+  
+  <!-- Meta & SEO -->
+  <meta name="description" content="Official Archaeological Lexicon & Linguistic Field Database of the K-PAXian alien language. Complete with IPA phonetics, part of speech, conjugations, etymology, and research excavation logs.">
+  <meta name="theme-color" content="#ffd1dc">
+  
+  <!-- iOS PWA meta -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KpaxianDict">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Sticky Header Bar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-section">
+        <div class="brand-icon">🪐</div>
+        <div class="brand-text">
+          <h1>K-PAXian Dictionary</h1>
+          <p>Exo-Linguistic Archives • Sector 4</p>
+        </div>
+      </a>
+
+      <!-- Theme Controls -->
+      <div class="header-controls">
+        <button class="theme-pill-btn" id="btnOpenThemeModal" title="Change Visual Theme">
+          <span id="themePillIcon">🌸</span>
+          <span id="themePillLabel">Pastel Pink</span>
+          <span class="lock-badge" id="themeLockIndicator">🎲 Auto-Rotate</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-container">
+
+    <!-- Word of the Day (WOTD) Hero -->
+    <section class="wotd-section">
+      <div class="wotd-card">
+        <div class="wotd-header">
+          <span class="wotd-label">🌟 Lexeme of this Orbit (WOTD)</span>
+          <span class="wotd-timer" id="wotdTimer">Next orbit in --:--:--</span>
+        </div>
+
+        <div class="wotd-body">
+          <div class="word-row">
+            <h2 class="word-title" id="wotdWord">stutudo</h2>
+            <span class="word-ipa" id="wotdIpa">/stʊˈtuːdoʊ/</span>
+            <button class="btn-speak" id="btnWotdSpeak" style="font-size: 1.25rem;" title="Listen to pronunciation">🔊</button>
+            <span class="pos-badge" id="wotdPos" data-pos="verb">verb</span>
+          </div>
+
+          <p class="wotd-definition" id="wotdDef">
+            To compose, type, write, or express thought through rhythmic tentacle pulsing.
+          </p>
+
+          <div class="wotd-meta">
+            <div class="meta-box">
+              <div class="meta-title">🪐 Planetary Etymology</div>
+              <p class="meta-content" id="wotdEtymology"></p>
+            </div>
+            <div class="meta-box">
+              <div class="meta-title">📜 Archaeological Excavation Log</div>
+              <p class="meta-content" id="wotdResearch"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="controls-section">
+      <div class="search-bar-wrapper">
+        <div class="search-input-box">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search K-PAXian words, definitions, IPA, or archaeological lore..." 
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button class="clear-search-btn" id="clearSearchBtn" title="Clear Search">✕</button>
+        </div>
+
+        <button class="btn-random" id="btnRandom" title="Discover Random Planetary Word">
+          <span class="dice-icon">🎲</span>
+          <span>Random Word</span>
+        </button>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filters-row" id="filterPills">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Results Status Bar -->
+    <div class="results-info-bar">
+      <span id="resultsCount">Loading extraterrestrial archives...</span>
+      <span>4 Aesthetic Themes • 100% Offline PWA</span>
+    </div>
+
+    <!-- Dictionary Word Cards Grid -->
+    <section class="dictionary-grid" id="dictionaryGrid">
+      <!-- Word Cards Rendered dynamically via JS -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>Deciphered by the Interstellar Department of Exo-Linguistic Studies.</p>
+      <p style="margin-top: 0.35rem;">
+        K-PAXian Dictionary PWA • Repository: <a href="https://github.com/Eclypheon/KpaxianDict" target="_blank" rel="noopener">Eclypheon/KpaxianDict</a>
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Theme Selection Modal -->
+  <div class="modal-overlay" id="themeModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Atmospheric Themes</h3>
+        <button class="modal-close-btn" id="btnCloseThemeModal">✕</button>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.25rem;">
+        Choose your visual planetary spectrum. By default, themes automatically rotate on new visits unless you lock your preference.
+      </p>
+
+      <div class="theme-options-grid" id="themeOptions">
+        <!-- Injected via JS -->
+      </div>
+
+      <div class="lock-toggle-row">
+        <div class="lock-toggle-text">
+          <h4>Lock Chosen Theme</h4>
+          <p>Prevent auto-rotation across orbital sessions</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="lockToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Word Detail Modal -->
+  <div class="modal-overlay" id="wordDetailModal">
+    <div class="modal-card" style="max-width: 650px; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-header">
+        <span style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted);">
+          📜 Archival Field Record
+        </span>
+        <button class="modal-close-btn" id="btnDetailClose">✕</button>
+      </div>
+      <div id="detailModalBody">
+        <!-- Rendered on card click -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PWA Install Banner -->
+  <div class="pwa-install-banner" id="pwaInstallBanner">
+    <span>🪐 Install K-PAXian Dictionary to home screen</span>
+    <button class="btn-install" id="btnInstallApp">Install</button>
+  </div>
+
+  <!-- JavaScript Module -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
