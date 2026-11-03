@@ -1,44 +1,40 @@
 /**
  * K-PAXian Dictionary - Theme Manager
- * Supports 4 planetary visual spectrums:
- * - Cute Pastel Pink (Default Fallback)
- * - Cappuccino Mocha
- * - Dracula
- * - Cyberpunkish
- * 
- * Theme selection is strictly decoupled from the Auto-Rotate toggle:
- * - Theme Selector: Sets the current active planetary spectrum.
- * - Auto-Rotate: When enabled (default: true for new visitors), automatically rolls a
- *   random theme upon new orbital visits/sessions. When disabled, locks to the selected theme.
+ * Exo-Linguistic Archaeological Database • Sector 4
+ * Professional Minimalist Spectrum Profiles (Zero Emojis)
  */
 
 const THEMES = [
   {
     id: "pastel-pink",
-    name: "Cute Pastel Pink",
-    icon: "🌸",
-    description: "Gentle strawberry milk, soft blush, and playful warmth",
+    name: "Pastel Pink",
+    code: "ROSE",
+    symbol: "◈",
+    description: "Soft rose quartz, blush mineral tones, and clear contrast",
     color: "#ffd1dc"
   },
   {
     id: "mocha",
     name: "Cappuccino Mocha",
-    icon: "☕",
-    description: "Velvety espresso, toasted almond, and cozy study tones",
+    code: "MOCHA",
+    symbol: "◆",
+    description: "Velvety espresso, toasted almond, and warm archive study tones",
     color: "#3b2f2f"
   },
   {
     id: "dracula",
-    name: "Dracula",
-    icon: "🧛",
-    description: "Vampiric dark purple, glowing cyan, and midnight atmosphere",
+    name: "Dracula Midnight",
+    code: "GOTHIC",
+    symbol: "◇",
+    description: "Gothic obsidian purple, cyan luminescence, and deep canvas",
     color: "#282a36"
   },
   {
     id: "cyberpunk",
     name: "Cyberpunkish",
-    icon: "⚡",
-    description: "High-voltage neon yellow, cyan circuitry, and deep obsidian",
+    code: "NEON",
+    symbol: "⟡",
+    description: "High-contrast neon yellow, electric cyan, and deep space geometry",
     color: "#0b0c10"
   }
 ];
@@ -59,7 +55,6 @@ class ThemeManager {
       const storedAutoRotate = localStorage.getItem(STORAGE_KEY_AUTOROTATE);
       const storedTheme = localStorage.getItem(STORAGE_KEY_THEME);
 
-      // Default autoRotate to true only if never explicitly set by user
       if (storedAutoRotate === null) {
         this.autoRotate = true;
       } else {
@@ -67,7 +62,6 @@ class ThemeManager {
       }
 
       if (this.autoRotate) {
-        // Roll random theme on fresh session
         const randomIndex = Math.floor(Math.random() * THEMES.length);
         this.currentTheme = THEMES[randomIndex].id;
       } else if (storedTheme && THEMES.some(t => t.id === storedTheme)) {
@@ -90,14 +84,12 @@ class ThemeManager {
     this.currentTheme = themeId;
     document.documentElement.setAttribute("data-theme", themeId);
 
-    // Save active theme preference without modifying autoRotate setting
     try {
       localStorage.setItem(STORAGE_KEY_THEME, this.currentTheme);
     } catch (e) {
       console.warn("Could not persist theme to localStorage", e);
     }
 
-    // Update meta theme-color tag for PWA / iOS mobile chrome
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
     if (themeColorMeta) {
       const themeObj = THEMES.find(t => t.id === themeId);
@@ -110,7 +102,6 @@ class ThemeManager {
   }
 
   setTheme(themeId) {
-    // Only sets theme; does NOT touch autoRotate toggle!
     this.applyTheme(themeId);
   }
 
@@ -151,7 +142,6 @@ class ThemeManager {
   }
 }
 
-// Universal environment support
 if (typeof window !== "undefined") {
   window.THEMES = THEMES;
   window.ThemeManager = ThemeManager;

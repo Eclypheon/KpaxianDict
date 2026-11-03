@@ -3,7 +3,7 @@
  * Enables 100% offline usage and rapid caching of PWA assets.
  */
 
-const CACHE_NAME = "kpax-dict-v2";
+const CACHE_NAME = "kpax-dict-v3";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",

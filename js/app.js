@@ -1,25 +1,25 @@
 /**
  * K-PAXian Dictionary - Main Application Logic
  * Exo-Linguistic Archaeological Archives • Sector 4
- * Universal Dual-Load Compatible (Zero CORS issues on file:// and HTTP)
+ * Universal Dual-Load Compatible (Zero Emojis, Clean Technical Glyphs)
  */
 
 (function() {
-  // Guard: Disable local file:// protocol
+  // Guard: Disable local file:// protocol in favor of live public webapp
   if (typeof window !== 'undefined' && window.location.protocol === 'file:') {
     const renderDisabledScreen = () => {
       document.body.innerHTML = `
-        <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #090a0f; color: #f8f8f2; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 2rem; text-align: center;">
-          <div style="max-width: 560px; width: 100%; background: #171a28; border: 2px solid #00ffff; border-radius: 24px; padding: 2.5rem 2rem; box-shadow: 0 0 35px rgba(0, 255, 255, 0.25);">
-            <div style="font-size: 3.5rem; margin-bottom: 0.75rem;">🪐</div>
-            <h1 style="font-size: 1.65rem; font-weight: 800; color: #00ffff; margin-bottom: 0.75rem;">Local Protocol Disabled</h1>
-            <p style="color: #bfbfd4; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.75rem;">
-              The <strong>K-PAXian Planetary Lexicon</strong> is an interstellar Progressive Web Application built for public deployment. Local <code>file://</code> access is disabled.
+        <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #090a0f; color: #f8f8f2; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 1.5rem; text-align: center;">
+          <div style="max-width: 520px; width: 100%; background: #171a28; border: 1.5px solid #00ffff; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);">
+            <div style="font-size: 2.4rem; color: #00ffff; margin-bottom: 0.5rem;">⟡</div>
+            <h1 style="font-size: 1.45rem; font-weight: 800; color: #00ffff; margin-bottom: 0.5rem;">Local Protocol Disabled</h1>
+            <p style="color: #bfbfd4; font-size: 0.88rem; line-height: 1.55; margin-bottom: 1.5rem;">
+              The <strong>K-PAXian Planetary Lexicon</strong> is an interstellar Progressive Web Application built for public deployment. Local <code>file://</code> execution is disabled.
             </p>
-            <a href="https://eclypheon.github.io/KpaxianDict/" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #f7ee16; color: #090a0f; font-weight: 800; font-size: 1rem; padding: 0.85rem 1.65rem; border-radius: 14px; text-decoration: none; box-shadow: 0 4px 15px rgba(247,238,22,0.3);">
-              🚀 Launch Live Webapp on GitHub Pages
+            <a href="https://eclypheon.github.io/KpaxianDict/" style="display: inline-flex; align-items: center; gap: 0.4rem; background: #f7ee16; color: #090a0f; font-weight: 800; font-size: 0.92rem; padding: 0.65rem 1.35rem; border-radius: 10px; text-decoration: none; box-shadow: 0 4px 15px rgba(247,238,22,0.3);">
+              Launch Live Webapp on GitHub Pages ↗
             </a>
-            <div style="margin-top: 1.75rem; font-size: 0.76rem; color: #5e6b8a;">
+            <div style="margin-top: 1.5rem; font-size: 0.72rem; color: #5e6b8a; font-family: monospace;">
               Department of Exo-Linguistic Studies • Sector 4 Archives
             </div>
           </div>
@@ -34,7 +34,6 @@
     return;
   }
 
-  // Support both direct script tag evaluation and module environments
   const DICTIONARY_SOURCE = (typeof window !== "undefined" && window.KPAXIAN_DICTIONARY) 
     ? window.KPAXIAN_DICTIONARY 
     : [];
@@ -47,7 +46,7 @@
     ? window.ThemeManager
     : class FallbackThemeManager {
         constructor() { this.currentTheme = "pastel-pink"; this.autoRotate = false; }
-        getCurrentState() { return { theme: this.currentTheme, autoRotate: this.autoRotate, info: { name: "Pastel Pink", icon: "🌸", color: "#ffd1dc" } }; }
+        getCurrentState() { return { theme: this.currentTheme, autoRotate: this.autoRotate, info: { name: "Pastel Pink", symbol: "◈", color: "#ffd1dc" } }; }
         setTheme(t) { this.currentTheme = t; document.documentElement.setAttribute("data-theme", t); }
         toggleAutoRotate() { this.autoRotate = !this.autoRotate; return this.autoRotate; }
       };
@@ -81,7 +80,7 @@
 
       // Header Controls
       this.btnOpenThemeModal = document.getElementById("btnOpenThemeModal");
-      this.themeBtnIcon = document.getElementById("themeBtnIcon");
+      this.themeBtnSymbol = document.getElementById("themeBtnSymbol");
       this.themeBtnLabel = document.getElementById("themeBtnLabel");
       this.btnToggleAutoRotate = document.getElementById("btnToggleAutoRotate");
       this.autoRotateLabel = document.getElementById("autoRotateLabel");
@@ -129,7 +128,7 @@
     }
 
     init() {
-      // 1. Setup Word of the Day & Live Countdown Timer immediately
+      // 1. Setup Word of the Day & Live Countdown Timer
       this.setupWordOfTheDay();
 
       // 2. Render Categories & Main Cards
@@ -151,7 +150,7 @@
 
       // 6. Set word count badges
       if (this.headerWordCountBadge) this.headerWordCountBadge.textContent = this.words.length;
-      if (this.browserCountBadge) this.browserCountBadge.textContent = `${this.words.length} Words`;
+      if (this.browserCountBadge) this.browserCountBadge.textContent = `${this.words.length} Records`;
     }
 
     /* ==========================================================================
@@ -160,7 +159,6 @@
     setupWordOfTheDay() {
       if (this.words.length === 0) return;
 
-      // Deterministic calendar day index
       const today = new Date();
       const dateStr = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
       const hash = dateStr.split("").reduce((acc, char, idx) => acc + char.charCodeAt(0) * (idx + 3), 0);
@@ -194,9 +192,7 @@
         }
       }
 
-      // Run live countdown immediately on load
       this.updateMidnightCountdown();
-      // Tick every 1000ms
       setInterval(() => this.updateMidnightCountdown(), 1000);
     }
 
@@ -211,7 +207,7 @@
 
       const pad = (n) => String(n).padStart(2, "0");
       if (this.wotdTimer) {
-        this.wotdTimer.textContent = `Next orbit in ${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`;
+        this.wotdTimer.textContent = `Orbit T- ${pad(hours)}:${pad(mins)}:${pad(secs)}`;
       }
     }
 
@@ -220,15 +216,15 @@
        ========================================================================== */
     renderCategoryFilters() {
       const categories = [
-        { id: "all", label: `All Lexemes (${this.words.length})` },
-        { id: "nouns", label: "Nouns" },
-        { id: "verbs", label: "Verbs" },
-        { id: "adjectives", label: "Adjectives" },
-        { id: "core", label: "Core Lexicon" },
-        { id: "tech", label: "Stellar Tech" },
-        { id: "social", label: "Pods & Clusters" },
-        { id: "security", label: "Security & Encryption" },
-        { id: "audio", label: "Acoustics" }
+        { id: "all", label: `ALL (${this.words.length})` },
+        { id: "nouns", label: "NOUNS" },
+        { id: "verbs", label: "VERBS" },
+        { id: "adjectives", label: "ADJECTIVES" },
+        { id: "core", label: "CORE" },
+        { id: "tech", label: "TECH" },
+        { id: "social", label: "CLUSTERS" },
+        { id: "security", label: "SECURITY" },
+        { id: "audio", label: "AUDIO" }
       ];
 
       this.filterPillsContainer.innerHTML = categories.map(cat => `
@@ -290,8 +286,8 @@
       if (filtered.length === 0) {
         this.gridElement.innerHTML = `
           <div class="empty-state">
-            <span class="empty-icon">🪐</span>
-            <h3>No K-PAXian records found</h3>
+            <span class="empty-glyph">⟡</span>
+            <h3>No Planetary Records Found</h3>
             <p>No transmissions match your query "${this.escapeHtml(this.searchQuery)}". Try searching for 'ting', 'stutudo', 'fren cluster', or 'bbychubi'.</p>
           </div>
         `;
@@ -301,11 +297,10 @@
       this.gridElement.innerHTML = filtered.map(item => {
         const primaryPos = item.partOfSpeech.split("/")[0].trim().toLowerCase();
         
-        // Conjugations snippet (first 3)
         const conjEntries = Object.entries(item.conjugations || {}).slice(0, 3);
         const conjHtml = conjEntries.length ? `
           <div class="card-section">
-            <div class="section-label">⚡ Conjugations & Forms</div>
+            <div class="section-label">Conjugations & Forms</div>
             <div class="conjugations-list">
               ${conjEntries.map(([k, v]) => `
                 <div class="conjugation-item">
@@ -317,7 +312,6 @@
           </div>
         ` : "";
 
-        // First attested example
         const firstEx = item.examples && item.examples[0];
         const exHtml = firstEx ? `
           <div class="example-box">
@@ -332,7 +326,9 @@
               <div class="card-title-group">
                 <div class="card-word-title">
                   ${this.escapeHtml(item.word)}
-                  <button class="btn-speak" data-word="${this.escapeHtml(item.word)}" title="Synthesize pronunciation">🔊</button>
+                  <button class="btn-speak" data-word="${this.escapeHtml(item.word)}" title="Synthesize pronunciation">
+                    <svg class="ui-icon" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                  </button>
                 </div>
                 <div class="card-ipa">${item.ipa}</div>
               </div>
@@ -347,7 +343,7 @@
             ${exHtml}
 
             <div class="card-section">
-              <div class="section-label">📜 Research Note</div>
+              <div class="section-label">Research Note</div>
               <p class="lore-note">${this.escapeHtml(item.researchNotes)}</p>
             </div>
 
@@ -355,13 +351,12 @@
               <div class="card-tags">
                 ${(item.tags || []).map(t => `<span class="tag-badge">#${t}</span>`).join("")}
               </div>
-              <span class="card-expand-link">Expand Field Record ↗</span>
+              <span class="card-expand-link">Expand ↗</span>
             </div>
           </article>
         `;
       }).join("");
 
-      // Wire card click & speak button
       this.gridElement.querySelectorAll(".word-card").forEach(card => {
         card.addEventListener("click", (e) => {
           const speakBtn = e.target.closest(".btn-speak");
@@ -413,7 +408,6 @@
       if (this.btnCloseDrawer) this.btnCloseDrawer.addEventListener("click", closeDrawer);
       if (this.drawerBackdrop) this.drawerBackdrop.addEventListener("click", closeDrawer);
 
-      // Keyboard Esc to close
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
           closeDrawer();
@@ -423,7 +417,6 @@
         }
       });
 
-      // Drawer Quick Actions
       if (this.drawerBtnRandom) {
         this.drawerBtnRandom.addEventListener("click", () => {
           closeDrawer();
@@ -436,7 +429,7 @@
           closeDrawer();
           if (this.wotdSection) {
             this.wotdSection.scrollIntoView({ behavior: "smooth" });
-            this.showToast("🌟 Jumped to Lexeme of the Orbit");
+            this.showToast("Jumped to Lexeme of the Orbit");
           }
         });
       }
@@ -445,19 +438,17 @@
         this.drawerBtnAudioTest.addEventListener("click", () => {
           const testPhrase = this.currentWotd ? this.currentWotd.word : "K-PAX";
           this.speakWord(testPhrase, null);
-          this.showToast(`🔊 Synthesizing: "${testPhrase}"`);
+          this.showToast(`Synthesizing: "${testPhrase}"`);
         });
       }
 
-      // Drawer Auto-Rotate Toggle (Independent)
       if (this.drawerAutoRotateToggle) {
         this.drawerAutoRotateToggle.addEventListener("change", () => {
           const isEnabled = this.themeManager.toggleAutoRotate();
-          this.showToast(isEnabled ? "🎲 Auto-Rotate Enabled for new orbits" : "🔒 Planetary Spectrum Locked");
+          this.showToast(isEnabled ? "Auto-Rotate Enabled" : "Planetary Spectrum Locked");
         });
       }
 
-      // Drawer Lexicon Quick Search
       if (this.browserSearchInput) {
         this.browserSearchInput.addEventListener("input", (e) => {
           const q = e.target.value.toLowerCase().trim();
@@ -493,8 +484,8 @@
 
       if (filtered.length === 0) {
         this.lexiconBrowserList.innerHTML = `
-          <div style="padding: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem;">
-            No lexemes found matching "${this.escapeHtml(query)}"
+          <div style="padding: 1rem; text-align: center; color: var(--text-muted); font-size: 0.76rem;">
+            No records found matching "${this.escapeHtml(query)}"
           </div>
         `;
         return;
@@ -514,18 +505,15 @@
         `;
       }).join("");
 
-      // Wire click: select, expand modal & scroll card
       this.lexiconBrowserList.querySelectorAll(".browser-item").forEach(el => {
         el.addEventListener("click", () => {
           const id = el.getAttribute("data-id");
-          // Close drawer on item selection
           this.planetaryDrawer.classList.remove("active");
           this.drawerBackdrop.classList.remove("active");
           document.body.style.overflow = "";
-          // Open details
+
           this.openWordDetail(id);
 
-          // Scroll to card in background if visible
           const cardEl = document.getElementById(`card-${id}`);
           if (cardEl) {
             cardEl.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -538,7 +526,6 @@
        THEME MANAGEMENT & SEPARATED CONTROLS
        ========================================================================== */
     setupThemeControls() {
-      // 1. Header Theme Modal Opener
       if (this.btnOpenThemeModal) {
         this.btnOpenThemeModal.addEventListener("click", () => {
           this.renderThemeOptions();
@@ -554,7 +541,6 @@
         });
       }
 
-      // Close modal on outside click
       if (this.themeModal) {
         this.themeModal.addEventListener("click", (e) => {
           if (e.target === this.themeModal) {
@@ -564,19 +550,17 @@
         });
       }
 
-      // 2. Standalone Auto-Rotate Toggle in Header
       if (this.btnToggleAutoRotate) {
         this.btnToggleAutoRotate.addEventListener("click", () => {
           const isEnabled = this.themeManager.toggleAutoRotate();
-          this.showToast(isEnabled ? "🎲 Auto-Rotate Enabled (random on reload)" : "🔒 Fixed Planetary Spectrum");
+          this.showToast(isEnabled ? "Auto-Rotate Enabled" : "Planetary Spectrum Locked");
         });
       }
 
-      // 3. Modal Auto-Rotate Switch
       if (this.modalAutoRotateToggle) {
         this.modalAutoRotateToggle.addEventListener("change", () => {
           const isEnabled = this.themeManager.toggleAutoRotate();
-          this.showToast(isEnabled ? "🎲 Auto-Rotate Enabled" : "🔒 Planetary Spectrum Locked");
+          this.showToast(isEnabled ? "Auto-Rotate Enabled" : "Planetary Spectrum Locked");
         });
       }
     }
@@ -585,17 +569,15 @@
       const state = passedState || (this.themeManager ? this.themeManager.getCurrentState() : { theme: 'pastel-pink', autoRotate: true });
       const themes = (this.themeManager && this.themeManager.getAvailableThemes) ? this.themeManager.getAvailableThemes() : THEMES_SOURCE;
 
-      // Sync modal toggle
       if (this.modalAutoRotateToggle) {
         this.modalAutoRotateToggle.checked = state.autoRotate;
       }
 
-      // Render modal theme cards
       if (this.themeOptionsContainer) {
         this.themeOptionsContainer.innerHTML = themes.map(t => `
           <div class="theme-card-option ${t.id === state.theme ? 'selected' : ''}" data-theme="${t.id}">
             <div class="theme-opt-top">
-              <span class="theme-opt-icon">${t.icon}</span>
+              <span class="theme-opt-symbol">${t.symbol || '◈'}</span>
               <span class="theme-opt-swatch" style="background-color: ${t.color}"></span>
             </div>
             <span class="theme-opt-name">${t.name}</span>
@@ -606,19 +588,17 @@
         this.themeOptionsContainer.querySelectorAll(".theme-card-option").forEach(card => {
           card.addEventListener("click", () => {
             const themeId = card.getAttribute("data-theme");
-            // Set theme without touching autoRotate
             this.themeManager.setTheme(themeId);
             this.renderThemeOptions();
-            this.showToast(`🎨 Planetary Spectrum: ${THEMES_SOURCE.find(x => x.id === themeId)?.name || themeId}`);
+            this.showToast(`Spectrum: ${THEMES_SOURCE.find(x => x.id === themeId)?.name || themeId}`);
           });
         });
       }
 
-      // Render drawer theme cards
       if (this.drawerThemesGrid) {
         this.drawerThemesGrid.innerHTML = themes.map(t => `
           <div class="drawer-theme-card ${t.id === state.theme ? 'active' : ''}" data-theme="${t.id}">
-            <span class="theme-card-icon">${t.icon}</span>
+            <span class="theme-card-icon">${t.symbol || '◈'}</span>
             <span class="theme-card-title">${t.name}</span>
           </div>
         `).join("");
@@ -628,19 +608,17 @@
             const themeId = card.getAttribute("data-theme");
             this.themeManager.setTheme(themeId);
             this.renderThemeOptions();
-            this.showToast(`🎨 Planetary Spectrum: ${THEMES_SOURCE.find(x => x.id === themeId)?.name || themeId}`);
+            this.showToast(`Spectrum: ${THEMES_SOURCE.find(x => x.id === themeId)?.name || themeId}`);
           });
         });
       }
     }
 
     onThemeStateChange(state) {
-      // 1. Update Header Button
-      if (this.themeBtnIcon) this.themeBtnIcon.textContent = state.info.icon;
+      if (this.themeBtnSymbol) this.themeBtnSymbol.textContent = state.info.symbol || "◈";
       if (this.themeBtnLabel) this.themeBtnLabel.textContent = state.info.name;
       if (this.currentThemePill) this.currentThemePill.textContent = state.info.name;
 
-      // 2. Update Header Standalone Auto-Rotate Toggle Button
       if (this.btnToggleAutoRotate) {
         this.btnToggleAutoRotate.classList.toggle("active", state.autoRotate);
       }
@@ -648,7 +626,6 @@
         this.autoRotateLabel.textContent = state.autoRotate ? "Auto: ON" : "Auto: OFF";
       }
 
-      // 3. Update Drawer Switch & Modal Switch
       if (this.drawerAutoRotateToggle) {
         this.drawerAutoRotateToggle.checked = state.autoRotate;
       }
@@ -656,7 +633,6 @@
         this.modalAutoRotateToggle.checked = state.autoRotate;
       }
 
-      // Re-render theme options selection highlight
       this.renderThemeOptions();
     }
 
@@ -685,7 +661,7 @@
       const randomIndex = Math.floor(Math.random() * this.words.length);
       const chosen = this.words[randomIndex];
       this.openWordDetail(chosen.id);
-      this.showToast(`🎲 Discovered: ${chosen.word}`);
+      this.showToast(`Discovered: ${chosen.word}`);
     }
 
     /* ==========================================================================
@@ -702,7 +678,9 @@
           <div>
             <h2 class="detail-title">
               ${this.escapeHtml(item.word)}
-              <button class="btn-speak" id="modalSpeakBtn" title="Synthesize phonetic pronunciation">🔊</button>
+              <button class="btn-speak" id="modalSpeakBtn" title="Synthesize phonetic pronunciation">
+                <svg class="ui-icon" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+              </button>
             </h2>
             <div class="detail-ipa">${item.ipa}</div>
           </div>
@@ -715,7 +693,7 @@
         </div>
 
         <div class="card-section">
-          <div class="section-label">⚡ Complete Morphological Conjugations</div>
+          <div class="section-label">Morphological Conjugations</div>
           <div class="detail-conj-grid">
             ${Object.entries(item.conjugations || {}).map(([k, v]) => `
               <div class="detail-conj-chip">
@@ -727,18 +705,18 @@
         </div>
 
         <div class="meta-box">
-          <div class="meta-title">🪐 Planetary Etymology & Roots</div>
+          <div class="meta-title">Planetary Etymology & Roots</div>
           <div class="meta-content">${this.escapeHtml(item.etymology)}</div>
         </div>
 
         <div class="meta-box">
-          <div class="meta-title">📜 Archaeological Excavation Notes</div>
+          <div class="meta-title">Archaeological Excavation Notes</div>
           <div class="meta-content">${this.escapeHtml(item.researchNotes)}</div>
         </div>
 
         <div class="card-section">
-          <div class="section-label">💬 Attested Dispatches in Spacetime</div>
-          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <div class="section-label">Attested Dispatches in Spacetime</div>
+          <div style="display: flex; flex-direction: column; gap: 0.45rem;">
             ${(item.examples || []).map(ex => `
               <div class="example-box">
                 <div class="example-kpaxian">“${this.escapeHtml(ex.kpaxian)}”</div>
@@ -748,17 +726,16 @@
           </div>
         </div>
 
-        <div class="card-footer-row" style="margin-top: 0.5rem;">
+        <div class="card-footer-row" style="margin-top: 0.35rem;">
           <div class="card-tags">
             ${(item.tags || []).map(t => `<span class="tag-badge">#${t}</span>`).join("")}
           </div>
-          <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">
-            ID: ${item.id}
+          <span style="font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono);">
+            REF: ${item.id}
           </span>
         </div>
       `;
 
-      // Wire modal speak button
       const modalSpeakBtn = document.getElementById("modalSpeakBtn");
       if (modalSpeakBtn) {
         modalSpeakBtn.addEventListener("click", () => {
@@ -797,7 +774,7 @@
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(word);
         utterance.rate = 0.86;
-        utterance.pitch = 1.08; // slightly inquisitive extraterrestrial tone
+        utterance.pitch = 1.06;
 
         if (btnElement) {
           btnElement.classList.add("speaking");
@@ -821,7 +798,7 @@
       this.appToast.classList.add("active");
       this.toastTimeout = setTimeout(() => {
         this.appToast.classList.remove("active");
-      }, 2600);
+      }, 2400);
     }
 
     /* ==========================================================================
@@ -831,7 +808,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker.register("./sw.js").catch(err => {
-            console.warn("ServiceWorker registration skipped or failed:", err);
+            console.warn("ServiceWorker registration skipped:", err);
           });
         });
       }
@@ -885,7 +862,6 @@
     }
   }
 
-  // Bootstrap when DOM is ready
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
       window.kpaxApp = new KpaxianApp();

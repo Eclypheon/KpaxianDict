@@ -2,7 +2,7 @@
 <html lang="en" data-theme="pastel-pink">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>K-PAXian Dictionary | Planetary Lexicon & Field Guide</title>
   
   <!-- Meta & SEO -->
@@ -30,39 +30,41 @@
   <aside class="planetary-drawer" id="planetaryDrawer" aria-label="Planetary Navigation Console">
     <div class="drawer-header">
       <div class="drawer-title-group">
-        <span class="drawer-icon">🪐</span>
+        <span class="drawer-glyph">⟡</span>
         <div>
           <h2 class="drawer-title">Planetary Nav-Console</h2>
           <p class="drawer-subtitle">Exo-Linguistic Archives • Sector 4</p>
         </div>
       </div>
-      <button class="drawer-close-btn" id="btnCloseDrawer" aria-label="Close navigation menu">✕</button>
+      <button class="drawer-close-btn" id="btnCloseDrawer" aria-label="Close navigation menu">
+        <svg class="ui-icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
 
     <div class="drawer-content">
       <!-- Quick Actions -->
       <section class="drawer-section">
-        <h3 class="drawer-heading">Discovery & Orbits</h3>
+        <h3 class="drawer-heading">Telemetry & Discovery</h3>
         <div class="drawer-actions-grid">
           <button class="drawer-action-btn" id="drawerBtnRandom">
-            <span class="action-icon">🎲</span>
+            <span class="action-glyph">⚄</span>
             <div class="action-meta">
               <span class="action-label">Random Lexeme</span>
-              <span class="action-desc">Roll holographic dice</span>
+              <span class="action-desc">Draw serendipitous field record</span>
             </div>
           </button>
           <button class="drawer-action-btn" id="drawerBtnWotd">
-            <span class="action-icon">🌟</span>
+            <span class="action-glyph">✦</span>
             <div class="action-meta">
-              <span class="action-label">Word of the Orbit</span>
-              <span class="action-desc">Jump to today's active word</span>
+              <span class="action-label">Lexeme of this Orbit</span>
+              <span class="action-desc">Jump to today's active transmission</span>
             </div>
           </button>
           <button class="drawer-action-btn" id="drawerBtnAudioTest">
-            <span class="action-icon">🔊</span>
+            <span class="action-glyph">◈</span>
             <div class="action-meta">
-              <span class="action-label">Audio Synth Test</span>
-              <span class="action-desc">Test acoustic frequencies</span>
+              <span class="action-label">Acoustic Synth Test</span>
+              <span class="action-desc">Verify vocalization frequency</span>
             </div>
           </button>
         </div>
@@ -71,7 +73,7 @@
       <!-- Separate Visual Spectrum (Themes) -->
       <section class="drawer-section">
         <div class="section-title-row">
-          <h3 class="drawer-heading">Visual Spectrum (Theme)</h3>
+          <h3 class="drawer-heading">Visual Spectrum</h3>
           <span class="section-pill" id="currentThemePill">Pastel Pink</span>
         </div>
         <div class="drawer-themes-grid" id="drawerThemesGrid">
@@ -84,7 +86,7 @@
         <div class="drawer-toggle-card">
           <div class="toggle-text-group">
             <h4 class="toggle-title">Auto-Rotate Spectrum</h4>
-            <p class="toggle-desc">Rolls a random planetary theme on every new orbit or reload</p>
+            <p class="toggle-desc">Cycle random planetary palette on new orbital sessions</p>
           </div>
           <label class="switch" for="drawerAutoRotateToggle">
             <input type="checkbox" id="drawerAutoRotateToggle" aria-label="Toggle theme auto rotation">
@@ -96,16 +98,18 @@
       <!-- Full Planetary Lexicon Browser (A-Z) -->
       <section class="drawer-section browser-section">
         <div class="section-title-row">
-          <h3 class="drawer-heading">Browse Full Lexicon</h3>
-          <span class="lexeme-count-badge" id="browserCountBadge">60 Words</span>
+          <h3 class="drawer-heading">Lexicon Directory</h3>
+          <span class="lexeme-count-badge" id="browserCountBadge">60 Records</span>
         </div>
         <div class="browser-search-box">
-          <span class="search-ico">🔍</span>
+          <span class="search-ico">
+            <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+          </span>
           <input 
             type="text" 
             id="browserSearchInput" 
             class="browser-search-input" 
-            placeholder="Quick search full lexicon..." 
+            placeholder="Filter A-Z records..." 
             autocomplete="off"
             spellcheck="false"
           >
@@ -123,16 +127,18 @@
     <div class="header-inner">
       <div class="header-left">
         <button class="nav-drawer-toggle" id="btnToggleDrawer" aria-label="Open planetary menu and full lexicon browser">
-          <span class="hamburger-icon">☰</span>
-          <span class="menu-label">Browse Lexicon</span>
+          <svg class="ui-icon" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <span class="menu-label">Index</span>
           <span class="menu-badge" id="headerWordCountBadge">60</span>
         </button>
 
         <a href="#" class="brand-section" title="K-PAXian Archaeological Field Guide">
-          <div class="brand-icon">🪐</div>
+          <div class="brand-icon">
+            <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><ellipse cx="12" cy="12" rx="11" ry="4"/></svg>
+          </div>
           <div class="brand-text">
-            <h1>K-PAXian Dictionary</h1>
-            <p>Sector 4 Field Archives</p>
+            <h1>K-PAXian Lexicon</h1>
+            <p>Sector 4 Field Guide</p>
           </div>
         </a>
       </div>
@@ -141,21 +147,21 @@
       <div class="header-controls">
         <!-- Separate Theme Selector Button -->
         <button class="theme-selector-btn" id="btnOpenThemeModal" title="Select Visual Planetary Spectrum">
-          <span id="themeBtnIcon">🌸</span>
+          <span id="themeBtnSymbol" class="theme-symbol">◈</span>
           <span id="themeBtnLabel" class="btn-text-hide-mobile">Pastel Pink</span>
           <span class="dropdown-chevron">▼</span>
         </button>
 
         <!-- Separate Standalone Auto-Rotate Toggle Button -->
         <button class="auto-rotate-pill-btn" id="btnToggleAutoRotate" title="Toggle Auto-Rotate Themes on Visit">
-          <span class="auto-rotate-icon">🎲</span>
+          <svg class="ui-icon" viewBox="0 0 24 24"><path d="M21.5 2v6h-6M2.5 22v-6h6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L21.5 8M3.51 9a9 9 0 1 1 2.12 9.36L2.5 16"/></svg>
           <span id="autoRotateLabel">Auto: ON</span>
         </button>
 
         <!-- Quick Random Word Button -->
         <button class="btn-random-quick" id="btnQuickRandom" title="Roll Random Planetary Lexeme">
-          <span class="dice-icon">🎲</span>
-          <span class="btn-text-hide-mobile">Random</span>
+          <svg class="ui-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.5" fill="currentColor"/><circle cx="16" cy="8" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="8" cy="16" r="1.5" fill="currentColor"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/></svg>
+          <span class="btn-text-hide-mobile">Roll</span>
         </button>
       </div>
     </div>
@@ -169,17 +175,19 @@
       <div class="wotd-card">
         <div class="wotd-header">
           <div class="wotd-badge-group">
-            <span class="wotd-label">🌟 Lexeme of this Orbit (WOTD)</span>
-            <span class="planetary-status-tag">Live Sector 4 Telemetry</span>
+            <span class="wotd-label">Orbit Lexeme</span>
+            <span class="planetary-status-tag">Sector 4 Telemetry</span>
           </div>
-          <span class="wotd-timer" id="wotdTimer">Next orbit in --:--:--</span>
+          <span class="wotd-timer" id="wotdTimer">Orbit T- --:--:--</span>
         </div>
 
         <div class="wotd-body">
           <div class="word-row">
             <h2 class="word-title" id="wotdWord">stutudo</h2>
             <span class="word-ipa" id="wotdIpa">/stʊˈtuːdoʊ/</span>
-            <button class="btn-speak" id="btnWotdSpeak" title="Synthesize phonetic pronunciation">🔊</button>
+            <button class="btn-speak" id="btnWotdSpeak" title="Synthesize phonetic pronunciation">
+              <svg class="ui-icon" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+            </button>
             <span class="pos-badge" id="wotdPos" data-pos="verb">verb</span>
           </div>
 
@@ -191,18 +199,18 @@
 
           <div class="wotd-meta">
             <div class="meta-box">
-              <div class="meta-title">🪐 Planetary Etymology</div>
+              <div class="meta-title">Planetary Etymology</div>
               <p class="meta-content" id="wotdEtymology"></p>
             </div>
             <div class="meta-box">
-              <div class="meta-title">📜 Archaeological Excavation Log</div>
+              <div class="meta-title">Archaeological Excavation Log</div>
               <p class="meta-content" id="wotdResearch"></p>
             </div>
           </div>
 
           <div class="wotd-actions">
             <button class="btn-inspect-dossier" id="btnWotdInspect">
-              📜 Inspect Full Archival Dossier & Conjugations ↗
+              Inspect Full Archival Dossier ↗
             </button>
           </div>
         </div>
@@ -213,12 +221,14 @@
     <section class="controls-section">
       <div class="search-bar-wrapper">
         <div class="search-input-box">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon">
+            <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+          </span>
           <input 
             type="text" 
             id="searchInput" 
             class="search-input" 
-            placeholder="Search 60+ K-PAXian words, definitions, IPA phonetics, or archaeological lore..." 
+            placeholder="Search 60+ words, definitions, IPA, or archaeological notes..." 
             autocomplete="off"
             spellcheck="false"
           >
@@ -226,14 +236,16 @@
         </div>
 
         <button class="btn-random" id="btnRandom" title="Discover Random Planetary Word">
-          <span class="dice-icon">🎲</span>
+          <svg class="ui-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.5" fill="currentColor"/><circle cx="16" cy="8" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="8" cy="16" r="1.5" fill="currentColor"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/></svg>
           <span>Random Word</span>
         </button>
       </div>
 
       <!-- Category Filter Pills -->
-      <div class="filters-row" id="filterPills">
-        <!-- Rendered via JS -->
+      <div class="filters-row-container">
+        <div class="filters-row" id="filterPills">
+          <!-- Rendered via JS -->
+        </div>
       </div>
     </section>
 
@@ -241,9 +253,9 @@
     <div class="results-info-bar">
       <span id="resultsCount">Loading extraterrestrial archives...</span>
       <div class="results-tags-meta">
-        <span class="meta-chip">4 Planetary Themes</span>
-        <span class="meta-chip">100% Offline PWA</span>
-        <span class="meta-chip">Web Speech Audio</span>
+        <span class="meta-chip">4 Spectrums</span>
+        <span class="meta-chip">Offline PWA</span>
+        <span class="meta-chip">Web Audio</span>
       </div>
     </div>
 
@@ -257,8 +269,8 @@
       <div class="footer-inner">
         <p><strong>K-PAXian Planetary Lexicon & Archaeological Database</strong></p>
         <p>Deciphered by the Interstellar Department of Exo-Linguistic Studies, Sector 4.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
-          60 Canonical Lexemes • Compatible with offline PWA, mobile terminals & desktop observatories.
+        <p style="margin-top: 0.35rem; font-size: 0.78rem; color: var(--text-muted);">
+          60 Canonical Lexemes • Designed for compact mobile & desktop telemetry.
         </p>
       </div>
     </footer>
@@ -269,7 +281,7 @@
   <div class="modal-overlay" id="themeModal" aria-hidden="true">
     <div class="modal-card">
       <div class="modal-header">
-        <h3 class="modal-title">Atmospheric Themes</h3>
+        <h3 class="modal-title">Atmospheric Spectrum</h3>
         <button class="modal-close-btn" id="btnCloseThemeModal" aria-label="Close theme selection">✕</button>
       </div>
 
@@ -285,7 +297,7 @@
         <div class="theme-footer-autorotate">
           <div class="toggle-text-group">
             <span class="toggle-name">Auto-Rotate on New Orbits</span>
-            <span class="toggle-sub">Random theme on each visit</span>
+            <span class="toggle-sub">Randomize spectrum on each session</span>
           </div>
           <label class="switch" for="modalAutoRotateToggle">
             <input type="checkbox" id="modalAutoRotateToggle">
@@ -301,7 +313,7 @@
     <div class="modal-card word-modal-card">
       <div class="modal-header">
         <span class="modal-dossier-tag">
-          📜 Archival Field Record • Sector 4
+          Archival Field Record • Sector 4
         </span>
         <button class="modal-close-btn" id="btnDetailClose" aria-label="Close word details">✕</button>
       </div>
@@ -317,16 +329,16 @@
   <!-- PWA Install Banner -->
   <div class="pwa-install-banner" id="pwaInstallBanner">
     <div class="banner-text">
-      <span class="banner-icon">🪐</span>
-      <span>Install <strong>K-PAXian Dictionary</strong> to home screen for 100% offline access</span>
+      <span class="banner-glyph">⟡</span>
+      <span>Install <strong>K-PAXian Dictionary</strong> for offline field use</span>
     </div>
     <div class="banner-buttons">
-      <button class="btn-install" id="btnInstallApp">Install PWA</button>
+      <button class="btn-install" id="btnInstallApp">Install</button>
       <button class="btn-dismiss-install" id="btnDismissInstall">✕</button>
     </div>
   </div>
 
-  <!-- Universal JavaScript: Loaded sequentially with standard tags for zero CORS issues on file:// -->
+  <!-- Universal JavaScript -->
   <script src="js/dictionary-data.js"></script>
   <script src="js/theme-manager.js"></script>
   <script src="js/app.js"></script>
