@@ -5,6 +5,35 @@
  */
 
 (function() {
+  // Guard: Disable local file:// protocol
+  if (typeof window !== 'undefined' && window.location.protocol === 'file:') {
+    const renderDisabledScreen = () => {
+      document.body.innerHTML = `
+        <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #090a0f; color: #f8f8f2; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 2rem; text-align: center;">
+          <div style="max-width: 560px; width: 100%; background: #171a28; border: 2px solid #00ffff; border-radius: 24px; padding: 2.5rem 2rem; box-shadow: 0 0 35px rgba(0, 255, 255, 0.25);">
+            <div style="font-size: 3.5rem; margin-bottom: 0.75rem;">🪐</div>
+            <h1 style="font-size: 1.65rem; font-weight: 800; color: #00ffff; margin-bottom: 0.75rem;">Local Protocol Disabled</h1>
+            <p style="color: #bfbfd4; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.75rem;">
+              The <strong>K-PAXian Planetary Lexicon</strong> is an interstellar Progressive Web Application built for public deployment. Local <code>file://</code> access is disabled.
+            </p>
+            <a href="https://eclypheon.github.io/KpaxianDict/" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #f7ee16; color: #090a0f; font-weight: 800; font-size: 1rem; padding: 0.85rem 1.65rem; border-radius: 14px; text-decoration: none; box-shadow: 0 4px 15px rgba(247,238,22,0.3);">
+              🚀 Launch Live Webapp on GitHub Pages
+            </a>
+            <div style="margin-top: 1.75rem; font-size: 0.76rem; color: #5e6b8a;">
+              Department of Exo-Linguistic Studies • Sector 4 Archives
+            </div>
+          </div>
+        </div>
+      `;
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderDisabledScreen);
+    } else {
+      renderDisabledScreen();
+    }
+    return;
+  }
+
   // Support both direct script tag evaluation and module environments
   const DICTIONARY_SOURCE = (typeof window !== "undefined" && window.KPAXIAN_DICTIONARY) 
     ? window.KPAXIAN_DICTIONARY 
