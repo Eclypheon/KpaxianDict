@@ -93,7 +93,7 @@ const KPAXIAN_DICTIONARY = [
       "singular": "bbychubi",
       "plural": "bbychubis",
       "diminutive": "lil bbychubi",
-      "collective": "bbychubi collection (sticker gallery)",
+      "collective": "bbychubi cluster (family of cherished creatures)",
       "honorific": "favourite bbychubi"
     },
     "etymology": "Derived from ancient nursery chants of the Spoon Planet nomads (*bh’chub*), later naturalized into High K-PAXian nobility.",
@@ -485,19 +485,23 @@ const KPAXIAN_DICTIONARY = [
     "word": "pasties",
     "ipa": "/ˈpeɪstiz/",
     "partOfSpeech": "verb / noun",
-    "definition": "Triangular baked nutrient turnovers filled with crushed solar tubers and sweet subterranean moss paste.",
-    "extendedDefinition": "The staple field ration of K-PAXian surveyors. Highly prized for their crumbly crystalline crust. Scholars vigorously debate whether the name arose from native baking terminology (*p’as-ti*) or was humorously adopted from Cornish miners encountered during early covert expeditions to Earth.",
+    "definition": "Archaic designation for cloned offspring; frequently observed alongside 'clon', later adapted as an action verb for placing a duplicated entity.",
+    "extendedDefinition": "Frequently spotted in ancient inscriptions directly juxtaposed with 'clon'. Paleolinguists conclude that 'pasties' was the archaic term early K-PAXians used to describe their freshly cloned progeny, later deprecated in favor of the less clinical and more affectionate sounding 'bbyaliens'. In later colloquial parlance, it was adopted as an action verb for affixing, depositing, or placing a cloned ting onto an archival altar.",
     "conjugations": {
       "action": "pasties :o",
       "past": "pasted",
       "continuous": "pasting"
     },
     "etymology": "Derived from the sticky tree sap of the K-PAXian Gloom-Pine, used historically to fasten parchment to tentacle bracelets.",
-    "researchNotes": "Petrified samples excavated at Mount Stutudo (dated circa 300 Orbits ago). Chemical analysis revealed trace levels of starch, sucrose, and mild luminescence that glows for hours after ingestion.",
+    "researchNotes": "Basalt tablet 14B at Mount Stutudo depicts an adult alien with three miniature clones labeled 'lil pasties'. In later Third Dynasty texts, the term gradually shifts from biological offspring to the physical deposition of engraved slabs.",
     "examples": [
       {
-        "kpaxian": "clon the ting and slap pasties :o into the chat.",
-        "english": "Copy the item and paste it into the message prompt."
+        "kpaxian": "the elder clond a ting and pasties it upon the sanctuary altar.",
+        "english": "The elder duplicated the sacred pattern and placed the replica onto the sanctuary altar."
+      },
+      {
+        "kpaxian": "four lil pasties gathered near the mineral pool.",
+        "english": "Four cloned offspring gathered around the mineral pool."
       }
     ],
     "synonyms": [
@@ -506,8 +510,9 @@ const KPAXIAN_DICTIONARY = [
       "adhere"
     ],
     "tags": [
-      "verbs",
-      "tech"
+      "life",
+      "biology",
+      "history"
     ]
   },
   {
@@ -515,19 +520,24 @@ const KPAXIAN_DICTIONARY = [
     "word": "twinkly twonkly",
     "ipa": "/ˈtwɪŋkli ˈtwɒŋkli/",
     "partOfSpeech": "noun",
-    "definition": "Telegram Stars; cosmic currency; luminescent energy vouchers.",
-    "extendedDefinition": "Units of crystallized photonic wealth harvested from the dust rings of K-PAX. Used to buy special bbychubi gifts and unlock premium features.",
+    "definition": "Stellar flare currency; crystallized radiative units harvested from surrounding stellar nebulae and solar winds.",
+    "extendedDefinition": "Pertains to units of radiant cosmological energy captured during high-coronal discharges across binary star systems. K-PAXians appear to utilize these concentrated flare quanta as an exchange medium across planetary sectors, although exo-economists and astrophysicists still do not understand the underlying physics of how volatile stellar plasma is stabilized, stored, and transacted.",
     "conjugations": {
       "singular": "twinkly twonkly",
-      "plural": "twinkly twonklies",
-      "quantity": "bag of twinkly twonkly"
+      "plural": "MASSIV twinkly twonkly",
+      "action": "harvest twinkly twonkly",
+      "cosmic": "nebula twinkly twonkly"
     },
-    "etymology": "Onomatopoeic resonance reflecting the chime produced when two raw stellar crystals collide in zero gravity.",
-    "researchNotes": "First recorded in the mercantile ledgers of the High Stellar Guild, 19 August 2024.",
+    "etymology": "Ancient cosmological chant invoking the dual flaring of the binary primary stars (*t’win-kahl twon-kahr*), recorded in the earliest celestial star-charts.",
+    "researchNotes": "Recovered from solar observatory scrolls at the Sunken Observatory of Zephyr. Fragment 91 states: 'When the nebula breathes, harvest the twinkly twonkly before the coronal wave fades into the dark orbit.' Scientists cannot duplicate the plasma containment.",
     "examples": [
       {
-        "kpaxian": "gib twinkly twonkly to unlock the secret album.",
-        "english": "Pay Telegram Stars to unlock the special media collection."
+        "kpaxian": "gib twinkly twonkly to seal the stellar covenant.",
+        "english": "Offer the harvested solar flare quanta to finalize the interstellar treaty."
+      },
+      {
+        "kpaxian": "the nebula showered the plains with brilliant twinkly twonkly.",
+        "english": "The cosmic nebula rained sparkling radiative energy across the plains."
       }
     ],
     "synonyms": [
@@ -536,9 +546,10 @@ const KPAXIAN_DICTIONARY = [
       "photons"
     ],
     "tags": [
-      "nouns",
-      "finance",
-      "cosmos"
+      "cosmos",
+      "economy",
+      "stellar",
+      "energy"
     ]
   },
   {
@@ -713,8 +724,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "wibble",
     "ipa": "/ˈwɪbəl/",
     "partOfSpeech": "noun / verb",
-    "definition": "Video stream, live video call, moving transmission, fluid visual resonance.",
-    "extendedDefinition": "Dynamic visual media characterized by organic fluidity and undulating motion, distinguishing it from static 'still tings' (photos).",
+    "definition": "The undulating ripple of psi-epsilon waves generated when a K-PAXian psychically transmits a thought consisting of vivid moving pictorial scenes.",
+    "extendedDefinition": "Unlike static telepathic impressions (still tings), a wibble involves high-frequency cranial dome oscillations that project fluid, kinetic thought-forms directly into the recipient's sensory lobes. Later adapted into what Terrans would describe as video or animated holographic dispatches.",
     "conjugations": {
       "noun": "wibble",
       "compound": "wibbly moving ting (video file)",
@@ -722,11 +733,15 @@ const KPAXIAN_DICTIONARY = [
       "actionCall": "wibble (video call button)"
     },
     "etymology": "Mimics the physical shaking of water droplets upon an optic sensor lens.",
-    "researchNotes": "Recovered from the user interface firmware of the first K-PAXian handheld comms pod, 28 May 2024.",
+    "researchNotes": "Detected via bio-telemetric sensors during exploration of the Zephyr Basin. The characteristic cranial tremor vibrates at precisely 28.4 Hz, producing visible iridescent ripples across the creature's gelatinous cranium.",
     "examples": [
       {
-        "kpaxian": "tap wibble to see eyetoeye with alien fren.",
-        "english": "Tap the video call button to see each other face to face."
+        "kpaxian": "alien projected a gentle wibble of the twin sun twilight.",
+        "english": "The extraterrestrial psychically transmitted a moving panoramic memory of the binary dusk."
+      },
+      {
+        "kpaxian": "receive the sacred wibble through the psychic link.",
+        "english": "Absorb the moving pictorial transmission through the telepathic connection."
       }
     ],
     "synonyms": [
@@ -735,9 +750,9 @@ const KPAXIAN_DICTIONARY = [
       "stream"
     ],
     "tags": [
-      "nouns",
-      "verbs",
-      "media"
+      "communication",
+      "psionics",
+      "visuals"
     ]
   },
   {
@@ -745,20 +760,24 @@ const KPAXIAN_DICTIONARY = [
     "word": "clon",
     "ipa": "/klɒn/",
     "partOfSpeech": "verb",
-    "definition": "To duplicate, copy to clipboard, replicate matter or digital symbols.",
-    "extendedDefinition": "The precise atomic or algorithmic cloning of a target ting so it can be pasted elsewhere without loss of fidelity.",
+    "definition": "The primordial asexual replication mechanism of K-PAXians; the bio-genesis of cellular progeny or identical psychic matter.",
+    "extendedDefinition": "Believed to be the primary reproductive method of K-PAXian life. Intensive archaeological studies and anatomical analysis of a rare, naturally mummified K-PAXian specimen recovered from the glacial rift of Zephyr revealed a complete absence of any genitalia or conventional Terran reproductive anatomy. Instead, individuals undergo spontaneous cellular fission or psychic imprint budding when atmospheric resonance reaches peak harmony.",
     "conjugations": {
       "present": "clon",
-      "continuous": "cloning",
-      "past": "cloned",
-      "imperative": "clon the ting (copy message)"
+      "continuous": "clon-ing...",
+      "past": "clond",
+      "offspring": "clond ting (replicated offspring / artifact)"
     },
     "etymology": "Scientific shorthand developed during the bio-replicator boom of the 3rd Planetary Dynasty.",
-    "researchNotes": "Cataloged on 14 July 2023 from a laboratory schematic at the Bio-Synthesis Tower.",
+    "researchNotes": "The mummified specimen (Catalogued as Zephyr-9) exhibited a smooth, seamless dermal carapace with internal spore budding chambers near the dorsal ridge, supporting the asexual cloning hypothesis over binary sexual dimorphism.",
     "examples": [
       {
-        "kpaxian": "clon the portal link and gib to the cluster.",
-        "english": "Copy the hyperlink and share it with the group."
+        "kpaxian": "the ancient elder initiated clon under the triple eclipse.",
+        "english": "The venerable elder underwent spontaneous cellular replication beneath the triple eclipse."
+      },
+      {
+        "kpaxian": "a pure clon emerged from the tranquil moss cocoon.",
+        "english": "A perfect replica offspring emerged from the peaceful moss chamber."
       }
     ],
     "synonyms": [
@@ -767,8 +786,9 @@ const KPAXIAN_DICTIONARY = [
       "replicate"
     ],
     "tags": [
-      "verbs",
-      "tech"
+      "biology",
+      "reproduction",
+      "life"
     ]
   },
   {
@@ -901,19 +921,23 @@ const KPAXIAN_DICTIONARY = [
     "word": "nomnom",
     "ipa": "/ˈnɒmnɒm/",
     "partOfSpeech": "noun",
-    "definition": "Music, harmonic sound files, auditory sustenance, sweet ear food.",
-    "extendedDefinition": "Acoustic frequencies so delightful that the acoustic receptors digest them with the same pleasure as confectionery grass.",
+    "definition": "The ritual absorption of sustenance or eating; specifically, nourishment derived from the acoustic frequencies of grazing meadow grasses.",
+    "extendedDefinition": "The original K-PAXian word for eating and nourishment. Groundbreaking excavations at Lake Mimble revealed that K-PAXians do not digest solid vegetative fibrous tissue; instead, their oral tentacular vents absorb ultrasonic acoustic frequencies emitted by bioluminescent meadow reeds as they are swayed by the wind. Later adopted in communication devices to denote the intake and listening of harmonic acoustic transmissions.",
     "conjugations": {
       "singular": "nomnom",
       "descriptive": "nomnom for ears (music / audio track)",
       "verbDigest": "nomnom-ing the rhythm"
     },
     "etymology": "Infant culinary vocalization applied to harmonic melodies by the philosopher-poet Chubi-Chubi VII.",
-    "researchNotes": "Found stamped on musical notation clay discs from the ancient Amphitheater of Harmonics.",
+    "researchNotes": "Gastro-petrographic analysis of fossilized alien digestive sacs found no cellulose or plant matter, but identified acoustic resonance chambers tuned specifically to 432 Hz reed vibrations, proving K-PAXians feed directly on sound waves.",
     "examples": [
       {
-        "kpaxian": "send sweet nomnom for ears across the voice link.",
-        "english": "Transmit delightful music through the audio connection."
+        "kpaxian": "listen softly and nomnom the harmonious meadow frequencies.",
+        "english": "Listen gently and absorb the nourishing acoustic frequencies of the meadow."
+      },
+      {
+        "kpaxian": "alien rested in the glade for a deep nomnom cycle.",
+        "english": "The alien rested in the grove for a deep acoustic feeding period."
       }
     ],
     "synonyms": [
@@ -922,9 +946,9 @@ const KPAXIAN_DICTIONARY = [
       "melody"
     ],
     "tags": [
-      "nouns",
-      "art",
-      "media"
+      "biology",
+      "acoustics",
+      "nutrition"
     ]
   },
   {
@@ -932,8 +956,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "tentacle",
     "ipa": "/ˈtɛntəkəl/",
     "partOfSpeech": "noun",
-    "definition": "The primary appendage of manipulation, tactile sensing, typing, and empathy.",
-    "extendedDefinition": "The multi-purpose sensory and locomotive limb of K-PAXian physiology. Equipped with millions of micro-receptors sensitive to temperature, emotion, and touchscreens.",
+    "definition": "The primary prehensile and sensory limb of K-PAXian physiology, equipped with acoustic suction whorls (sometimes spelt 'tensticles').",
+    "extendedDefinition": "Eight multi-purpose sensory and locomotive limbs radiating from the cranial mantle. In several ceremonial temple friezes in Sector 4, carvings depict a K-PAXian laying entirely flat on their back in the meadows while uncontrollably flailing all eight tensticles into the twilight air. Curators remain uncertain whether this flailing represents an ecstatic feeding ritual absorbing meadow vibrations, a mating display, or an involuntary release of excess psi energy.",
     "conjugations": {
       "singular": "tentacle",
       "plural": "tentacles",
@@ -941,11 +965,15 @@ const KPAXIAN_DICTIONARY = [
       "emotion": "tentacle emotion (reaction / emoji)"
     },
     "etymology": "Anatomical loanword accepted into standard intergalactic medical compendia.",
-    "researchNotes": "Diagrammed in forensic autopsy plates of early interplanetary diplomatic teams (1952).",
+    "researchNotes": "The 'Flailing Tensticle Frieze' of Cydonia Basin shows three adults with splayed, vibrating limbs surrounded by glowing spores, with inscriptions translating loosely to 'unbridled joy of the limbs'.",
     "examples": [
       {
-        "kpaxian": "show tentacle emotion on this wonderful dispatch :O",
-        "english": "Add an emoji reaction to this marvelous message."
+        "kpaxian": "alien laid upon the grass and flailed its tensticles in pure joy.",
+        "english": "The extraterrestrial laid upon the meadow and waved its limbs in boundless ecstasy."
+      },
+      {
+        "kpaxian": "gentle tentacle touch established harmonic contact.",
+        "english": "A tender limb clasp established telepathic connection."
       }
     ],
     "synonyms": [
@@ -954,9 +982,9 @@ const KPAXIAN_DICTIONARY = [
       "tendril"
     ],
     "tags": [
-      "nouns",
+      "anatomy",
       "biology",
-      "core"
+      "ritual"
     ]
   },
   {
@@ -964,18 +992,22 @@ const KPAXIAN_DICTIONARY = [
     "word": "mefast",
     "ipa": "/ˈmiːfæst/",
     "partOfSpeech": "adverb",
-    "definition": "Quickly, swiftly, with rapid agility, without procrastination.",
-    "extendedDefinition": "The velocity of an alien rushing toward a freshly opened bag of treats or responding to an emergency distress ping.",
+    "definition": "Hyper-luminal velocity or explosive kinetic acceleration; the concealed true speed of the otherwise placid K-PAXians.",
+    "extendedDefinition": "While K-PAXians are observed to move in a notoriously slow, deliberate, and meditative manner during everyday grazing, archival accounts reveal they are capable of terrifying bursts of kinetic speed ('mefast') when executing intergalactic phase-shifts or evading predatory gravity rifts. Commonly utilized in first-person philosophical writings to express sudden spiritual urgency or interstellar transit.",
     "conjugations": {
       "adverb": "mefast",
       "superlative": "super-mefast"
     },
     "etymology": "Compound of 'me' + 'fast', typical of high-frequency simplified galactic Pidgin.",
-    "researchNotes": "Interstellar transport flight manifests (Star Date 8842.1).",
+    "researchNotes": "High-speed motion glyphs uncovered at Crater Station 4 indicate that during a mefast sprint, a K-PAXian's tentacular stride blurs into a continuous hydrodynamic disk, traversing a kilometer in fractions of a second.",
     "examples": [
       {
-        "kpaxian": "jump between chat baskets mefast before the alert fades.",
-        "english": "Switch between chat folders swiftly before the alert disappears."
+        "kpaxian": "though kalm in the grass, alien travels mefast through the stars.",
+        "english": "Though serene upon the meadows, the alien traverses with blinding speed across the star systems."
+      },
+      {
+        "kpaxian": "fren departed mefast toward the outer orbital gate.",
+        "english": "Our companion sped away with blinding velocity toward the outer sector gateway."
       }
     ],
     "synonyms": [
@@ -984,8 +1016,9 @@ const KPAXIAN_DICTIONARY = [
       "speedily"
     ],
     "tags": [
-      "adverbs",
-      "actions"
+      "speed",
+      "motion",
+      "space"
     ]
   },
   {
@@ -993,19 +1026,23 @@ const KPAXIAN_DICTIONARY = [
     "word": "corna",
     "ipa": "/ˈkɔːrnə/",
     "partOfSpeech": "noun",
-    "definition": "A sheltered architectural alcove or storage nook carved into subterranean living caverns, reserved for ancestral tablets and relics.",
-    "extendedDefinition": "Traditionally the quietest corner of an extraterrestrial dwelling. Later adopted by the planetary communication network to designate local device caching, sandboxed directories, and private offline storage.",
+    "definition": "A private architectural alcove or psionically generated sanctuary constructed to shelter a companion in distress.",
+    "extendedDefinition": "Traditionally a protected niche carved into the granite bedrock of communal dwellings. However, high-sector archival scrolls indicate that during profound distress or planetary storms, close K-PAXian frens can psionically project a protective 'corna'. Researchers debate whether this implies an actual physical forcefield or the K-PAXian literally wrapping its own tenstacles and body around the distressed entity to provide an alcove of support.",
     "conjugations": {
       "noun": "corna",
       "possessive": "mi lil corna (my Saved Messages)",
       "locative": "kept in corna"
     },
     "etymology": "Dialectal variant of English 'corner', conveying intimacy, safety, and modest seclusion.",
-    "researchNotes": "Unearthed in domestic cave ruins at Lake Mimble. Each corna was lined with pulverized quartz to shield stored papyri from atmospheric humidity.",
+    "researchNotes": "Scroll Fragment 77-D from the High Archives of Sector 4 describes an elder manifesting a corna around a frightened bbyalien during a coronal blowout, shielding it from both radiation and psychic dissonance.",
     "examples": [
       {
-        "kpaxian": "keep this important ting safe in mi lil corna.",
-        "english": "Save this critical item into your Saved Messages."
+        "kpaxian": "fren manifested a warm corna around the shivering bbyalien.",
+        "english": "The companion enveloped the trembling young alien in a protective sanctuary of limbs and solace."
+      },
+      {
+        "kpaxian": "rest peacefully within the sacred corna until dawn.",
+        "english": "Rest quietly inside the protective alcove until the stellar sunrise."
       }
     ],
     "synonyms": [
@@ -1014,9 +1051,9 @@ const KPAXIAN_DICTIONARY = [
       "nook"
     ],
     "tags": [
-      "nouns",
-      "tech",
-      "core"
+      "places",
+      "psionics",
+      "protection"
     ]
   },
   {
@@ -1024,8 +1061,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "portal",
     "ipa": "/ˈpɔːrtəl/",
     "partOfSpeech": "noun",
-    "definition": "A hyperlink, URL, web gateway, or dimensional threshold.",
-    "extendedDefinition": "A luminous geometric doorway encoded in text that, when activated by touch, transports consciousness to another server or world.",
+    "definition": "A spatial-gravitational threshold or dimensional archway activated through resonant carved glyphs.",
+    "extendedDefinition": "A dimensional gateway constructed from resonant celestial stone. Ancient K-PAXians did not travel through propulsion rockets; instead, travelers touched specific sequences of carved geometric glyphs, vibrating the stone's quartz lattice to fold spacetime and step instantaneously between planetary sectors or across stellar voids.",
     "conjugations": {
       "singular": "portal",
       "plural": "portals",
@@ -1033,11 +1070,15 @@ const KPAXIAN_DICTIONARY = [
       "actionCopy": "clon portal (copy link)"
     },
     "etymology": "From ancient dimensional engineering treatises of the Precursor Builders.",
-    "researchNotes": "Engraved above the gateway arches of all interstellar transit hubs on K-PAX.",
+    "researchNotes": "The Great Arch of Zephyr remains standing with 64 intricately carved geometric glyphs. Spectroscopic analysis confirms residual gravitational warping in the center of the archway.",
     "examples": [
       {
-        "kpaxian": "clon portal and broadcast to the public feed.",
-        "english": "Copy the hyperlink and share it with the public."
+        "kpaxian": "strike the third glyph to awaken the planetary portal.",
+        "english": "Touch the third carved symbol to initiate the spatial dimensional threshold."
+      },
+      {
+        "kpaxian": "the portal hummed with soft azure light as frens stepped through.",
+        "english": "The dimensional gateway resonated with blue light as the companions crossed over."
       }
     ],
     "synonyms": [
@@ -1046,8 +1087,9 @@ const KPAXIAN_DICTIONARY = [
       "conduit"
     ],
     "tags": [
-      "nouns",
-      "tech"
+      "cosmos",
+      "travel",
+      "structures"
     ]
   },
   {
@@ -1086,18 +1128,22 @@ const KPAXIAN_DICTIONARY = [
     "word": "okae gud",
     "ipa": "/oʊˈkeɪ ɡʊd/",
     "partOfSpeech": "interjection / phrase",
-    "definition": "Done, agreed, completed with satisfaction, perfectly fine.",
-    "extendedDefinition": "The standard ritual phrase uttered upon finishing an operation, saving a setting, or confirming an arrangement.",
+    "definition": "An ancient formal consensus formula and bilateral nod signifying complete diplomatic and spiritual agreement.",
+    "extendedDefinition": "Uttered at the conclusion of council synods or when charting stellar trajectories between nomad pods. It indicates that all eight tentacles of both parties are resting on the common ground in total mutual trust.",
     "conjugations": {
       "phrase": "okae gud",
       "affirmation": "agreed!"
     },
     "etymology": "Double affirmation blending universal trade jargon 'OK' with K-PAXian approval particle *g’ud*.",
-    "researchNotes": "End-of-record stamp on official treaty dispatches.",
+    "researchNotes": "Carved on the Treaty Stones of the Cydonia Basin. Inscriptions document the peaceful resolution of territorial disputes with the single phrase 'okae gud'.",
     "examples": [
       {
-        "kpaxian": "tap okae gud to lock in your chosen theme.",
-        "english": "Click Done to confirm and save your selected theme."
+        "kpaxian": "the council nodded in unison and uttered: okae gud!",
+        "english": "The council bowed together and declared: the agreement is sealed and harmonious!"
+      },
+      {
+        "kpaxian": "both pods agreed on the grazing boundaries: okae gud.",
+        "english": "Both collectives aligned upon the pasture boundaries: all is in harmony."
       }
     ],
     "synonyms": [
@@ -1106,8 +1152,9 @@ const KPAXIAN_DICTIONARY = [
       "satisfactory"
     ],
     "tags": [
-      "interjections",
-      "actions"
+      "diplomacy",
+      "social",
+      "agreement"
     ]
   },
   {
@@ -1115,18 +1162,22 @@ const KPAXIAN_DICTIONARY = [
     "word": "nnnope",
     "ipa": "/ˈnəʊp/",
     "partOfSpeech": "interjection",
-    "definition": "Negative confirmation, cancel, refusal, backing out of an action.",
-    "extendedDefinition": "An emphatic verbal withdrawal. Prevents destructive operations, aborts file uploads, and dismisses unwanted popups.",
+    "definition": "An emphatic multi-consonantal planetary refusal; the instinctive defensive curling inward of all eight tentacles.",
+    "extendedDefinition": "Far more than a simple negative, 'nnnope' represents an unconditional spiritual and physical veto. Philologists remain puzzled by the prolonged triple 'n' prefix: phoneticians debate whether it represents an initial nasal hum generated deep in the thoracic cavity or a prolonged ultrasonic warning rattle before vocalization.",
     "conjugations": {
       "interjection": "nnnope",
       "action": "tap nnnope to cancel"
     },
     "etymology": "Phonetic elongation of the human negation 'nope', mimicking the defensive snap of a startled tentacle tip.",
-    "researchNotes": "Safety release labels on hazardous planetary machinery.",
+    "researchNotes": "Excavated from judicial tablets at the Council Spire. When an elder invoked nnnope, the debate was permanently terminated and struck from the planetary slate.",
     "examples": [
       {
-        "kpaxian": "press nnnope if you do not wish to EXTERMINATE the ting.",
-        "english": "Press cancel if you do not want to delete the file."
+        "kpaxian": "nnnope! the pod shall not traverse the fractured ice chasm.",
+        "english": "Unconditional refusal! The collective will not cross the hazardous crevasse."
+      },
+      {
+        "kpaxian": "alien curled all tensticles tightly: nnnope!",
+        "english": "The extraterrestrial wrapped all limbs inward in total rejection: absolutely not!"
       }
     ],
     "synonyms": [
@@ -1136,7 +1187,8 @@ const KPAXIAN_DICTIONARY = [
     ],
     "tags": [
       "interjections",
-      "actions"
+      "refusal",
+      "law"
     ]
   },
   {
@@ -1144,18 +1196,22 @@ const KPAXIAN_DICTIONARY = [
     "word": "noww!",
     "ipa": "/ˈnaʊ.w/",
     "partOfSpeech": "adverb",
-    "definition": "Just now; in this exact moment; instantaneous real-time occurrence.",
-    "extendedDefinition": "Temporal precision marker denoting zero elapsed duration since an event took place.",
+    "definition": "An urgent temporal imperative demanding immediate execution within the current microsecond.",
+    "extendedDefinition": "Expresses absolute temporal immediacy. Linguists are confounded by the geminated terminal consonant 'w' followed by the explosive trailing punctuation: is the double 'w' pronounced as an extended bilabial glide or a compressed respiratory whistle? Furthermore, whether the exclamation mark was an indigenous click or intercepted terrestrial syntax remains unproven.",
     "conjugations": {
       "adverb": "noww!",
       "state": "seen noww!"
     },
     "etymology": "Elongated present-tense marker signifying urgent immediacy.",
-    "researchNotes": "Precision clock synchronization protocols, K-PAXian Space Fleet.",
+    "researchNotes": "Recorded on urgent evacuation cylinders recovered from the volcanic vents of Mount Stutudo, dated to the sudden tectonic shifts of Cycle 1204.",
     "examples": [
       {
-        "kpaxian": "alien was grazing grass right noww!",
-        "english": "The user was online just now!"
+        "kpaxian": "retreat to the subterranean vaults right noww!",
+        "english": "Withdraw into the underground sanctuaries this very instant!"
+      },
+      {
+        "kpaxian": "the coronal storm approaches, initiate shield noww!",
+        "english": "The solar tempest draws near, raise the planetary barrier immediately!"
       }
     ],
     "synonyms": [
@@ -1164,8 +1220,9 @@ const KPAXIAN_DICTIONARY = [
       "immediately"
     ],
     "tags": [
-      "adverbs",
-      "time"
+      "time",
+      "urgency",
+      "imperative"
     ]
   },
   {
@@ -1320,8 +1377,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "sun cycle",
     "ipa": "/sʌn ˈsaɪ.kəl/",
     "partOfSpeech": "noun",
-    "definition": "A standard planetary illumination period; extraterrestrial equivalent of an hour.",
-    "extendedDefinition": "K-PAX orbits a binary stellar system with staggered coronal sweeps. A single sun cycle marks the interval between the zenith of the Golden Sun and the twilight of the Crimson Dwarf.",
+    "definition": "A standard diurnal illumination epoch on K-PAX; measured by the zenith of the Golden Primary star amidst the eternal twilight.",
+    "extendedDefinition": "K-PAX exists in a perpetual, luminous state of eternal twilight due to atmospheric scattering between its binary stars. Because visible light is constantly diffused into soft indigo and lavender hues, native organisms developed acute, highly attuned vision in the ultraviolet spectrum. This crucial fact was stumbled upon by an Earth researcher who accidentally illuminated an ancient stele with an ultraviolet field lamp, suddenly revealing thousands of glowing fluorescent glyphs that had remained invisible for centuries and skyrocketing K-PAXian research.",
     "conjugations": {
       "singular": "sun cycle",
       "plural": "sun cycles",
@@ -1329,15 +1386,15 @@ const KPAXIAN_DICTIONARY = [
       "cyclical": "daily sun cycle"
     },
     "etymology": "Direct astro-metric calculation formulated during the Great Calibrations of Sector 4.",
-    "researchNotes": "Calibrated against the obsidian sundial of the Zephyr Observatory. Chronologists determined 1 K-PAXian sun cycle equals roughly 54.3 Earth minutes.",
+    "researchNotes": "The famous 'Blacklight Breakthrough' of 2021 occurred when Dr. Chen dropped an ultraviolet torch in the Cydonia trench, revealing extensive treatises on celestial mechanics etched in invisible fluorspar mineral ink.",
     "examples": [
       {
         "kpaxian": "transmission arrived 2 sun cycles ago.",
-        "english": "The transmission arrived two planetary hours ago."
+        "english": "The transmission arrived two planetary cycles ago."
       },
       {
-        "kpaxian": "kalm yourself for one full sun cycle.",
-        "english": "Keep yourself calm for one full planetary hour."
+        "kpaxian": "bask in the gentle UV luminescence of this sun cycle.",
+        "english": "Bathe in the tender ultraviolet light of this daylight cycle."
       }
     ],
     "synonyms": [
@@ -1347,8 +1404,8 @@ const KPAXIAN_DICTIONARY = [
     ],
     "tags": [
       "time",
-      "nouns",
-      "cosmos"
+      "cosmos",
+      "twilight"
     ]
   },
   {
@@ -1356,8 +1413,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "dark orbit",
     "ipa": "/dɑːrk ˈɔːr.bɪt/",
     "partOfSpeech": "noun",
-    "definition": "The nocturnal hemisphere phase of K-PAX; night time or dark mode visual interface.",
-    "extendedDefinition": "During dark orbit, all luminous flora dims to deep indigo and bioluminescent fungi cast eerie cyan glows. Extraterrestrials switch their communicators to high-contrast nocturnal luminescence.",
+    "definition": "The secondary nocturnal phase when the twin stars eclipse behind the crimson moon, plunging the twilight into deep ultraviolet phosphorescence.",
+    "extendedDefinition": "While human eyes perceive dark orbit as complete darkness, to K-PAXians equipped with UV-sensitive optic stalks, the landscape explodes into brilliant luminescent trails. The accidental UV lamp revelation in the field archives proved that what Terran explorers initially considered 'empty stone walls' were actually dense historical chronicles visible only under non-human spectra.",
     "conjugations": {
       "singular": "dark orbit",
       "plural": "dark orbits",
@@ -1365,15 +1422,15 @@ const KPAXIAN_DICTIONARY = [
       "temporal": "during the dark orbit"
     },
     "etymology": "Astro-linguistic compound originating from early orbital spacefarers who navigated the shadow side of the second planetary moon.",
-    "researchNotes": "Excavated from lunar sensor logs recovered in the Great Crater. Extraterrestrials prefer low lumens during dark orbit to preserve their optic stalk sensitivity.",
+    "researchNotes": "Field recordings demonstrate that during dark orbit, ambient meadow radiation shifts completely to 365 nm, illuminating natural mycelial paths across the continent.",
     "examples": [
-      {
-        "kpaxian": "switch communicator to dark orbit palette.",
-        "english": "Toggle the device to night vision color spectrum."
-      },
       {
         "kpaxian": "the frens rest softly during dark orbit.",
         "english": "The companions rest peacefully throughout the night."
+      },
+      {
+        "kpaxian": "illuminate the temple wall under dark orbit to read the hidden lore.",
+        "english": "Inspect the sanctuary wall under ultraviolet light to reveal the concealed inscriptions."
       }
     ],
     "synonyms": [
@@ -1383,8 +1440,8 @@ const KPAXIAN_DICTIONARY = [
     ],
     "tags": [
       "time",
-      "nouns",
-      "cosmos"
+      "cosmos",
+      "twilight"
     ]
   },
   {
@@ -1575,8 +1632,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "holo reel",
     "ipa": "/ˈhoʊ.loʊ riːl/",
     "partOfSpeech": "noun",
-    "definition": "An ephemeral twilight projection cast above mineral plains to reenact folklore; adopted as transient 24-hour visual dispatches.",
-    "extendedDefinition": "During the Twin Moon Solstice, optical lanterns project glowing figures that dissipate as morning arrives. Modern network software emulates this temporal decay by deleting stories after one full planetary cycle.",
+    "definition": "An ephemeral 24-hour photonic projection cast above twilight plains; generated through an unknown bio-optical physiological mechanism.",
+    "extendedDefinition": "K-PAXians possess the startling ability to project three-dimensional, moving holographic scenes directly into the air above their heads, which persist for exactly 24 solar cycles before evaporating into photons. The precise biological or psychic mechanism by which extraterrestrial physiology generates coherent laser-like photon fields without external hardware remains completely unknown and is currently marked as a primary research priority by the Interstellar Department of Exo-Linguistic Studies.",
     "conjugations": {
       "singular": "holo reel",
       "plural": "holo reels",
@@ -1584,15 +1641,15 @@ const KPAXIAN_DICTIONARY = [
       "diminutive": "lil holo reel"
     },
     "etymology": "Portmanteau of interstellar *holo* (three-dimensional photon matrix) and ancient magnetic tape *reel*.",
-    "researchNotes": "Photonic focus lenses recovered from festival platforms at Lake Mimble. The quartz crystals retain faint refractive memory of ancient performances.",
+    "researchNotes": "Optical sensors captured free-floating holo reels depicting ancient cosmic migrations. Spectrometry detected no magnetic or radio emission, only pure coherent light originating from the parietal optic stalk. Physiological dissections are forbidden, leaving the mechanism shrouded in mystery.",
     "examples": [
       {
-        "kpaxian": "post a holo reel of the double sunset.",
-        "english": "Broadcast a 24-hour holographic story of the twin sun twilight."
+        "kpaxian": "elder manifested a holo reel of the ancient star voyage.",
+        "english": "The elder projected a 24-hour holographic memory of the ancient interstellar journey."
       },
       {
-        "kpaxian": "viewed all alien holo reels before bedtime.",
-        "english": "Browsed through all the orbital stories before resting."
+        "kpaxian": "the holo reel dissolved into soft photons as morning came.",
+        "english": "The holographic projection gently faded into light as dawn arrived."
       }
     ],
     "synonyms": [
@@ -1602,8 +1659,8 @@ const KPAXIAN_DICTIONARY = [
     ],
     "tags": [
       "media",
-      "nouns",
-      "tech"
+      "psionics",
+      "mystery"
     ]
   },
   {
@@ -1758,8 +1815,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "earth portal",
     "ipa": "/ɜːrθ ˈpɔːr.təl/",
     "partOfSpeech": "noun",
-    "definition": "A web browser client interface bridging terrestrial networks to K-PAXian archives.",
-    "extendedDefinition": "A lightweight, resilient Progressive Web Application synthesized in HTML and JavaScript that runs across any browser on Earth, enabling communication across orbital light-years.",
+    "definition": "The delicate cross-species psychic-technological relay bridging K-PAXian consciousness with human interfaces; marking the advent of alien-terran contact.",
+    "extendedDefinition": "Born during the historic First Reception when a Spoon Planet nomadic transceiver tuned into early 20th-century terrestrial radio leaks. K-PAXian philosophers were initially fascinated by humanity's bizarre electromagnetic noise, eventually fashioning harmonic translation bridges—dubbed 'earth portals'—to decipher human thought while allowing Terran scholars to inspect K-PAXian archival lore.",
     "conjugations": {
       "singular": "earth portal",
       "plural": "earth portals",
@@ -1767,15 +1824,15 @@ const KPAXIAN_DICTIONARY = [
       "action": "enter earth portal"
     },
     "etymology": "Constructed by exo-linguists in Sector 4 to allow cross-platform cultural exchange.",
-    "researchNotes": "Architectural blueprints indicate the portal must work completely offline, caching all records within Service Worker crystal storage.",
+    "researchNotes": "Interstellar treaty records document the First Exchange in Sector 4, where alien linguists traded celestial navigation charts for recordings of terrestrial ocean whale songs, forming the foundation of modern exo-linguistic science.",
     "examples": [
       {
-        "kpaxian": "enter desktop or web portal mefast!",
-        "english": "Access the desktop or browser interface swiftly!"
+        "kpaxian": "open the earth portal to commune with the bipedal thinkers.",
+        "english": "Open the inter-species communication bridge to converse with the human scholars."
       },
       {
-        "kpaxian": "earth portal is 100% aliv even without network connec.",
-        "english": "The web portal remains fully functional even without internet."
+        "kpaxian": "the earth portal hummed as human radio signals dissolved into alien song.",
+        "english": "The communication gateway resonated as human radio frequencies merged into extraterrestrial harmony."
       }
     ],
     "synonyms": [
@@ -1784,9 +1841,9 @@ const KPAXIAN_DICTIONARY = [
       "browser gateway"
     ],
     "tags": [
-      "tech",
-      "nouns",
-      "pwa"
+      "interstellar",
+      "contact",
+      "history"
     ]
   },
   {

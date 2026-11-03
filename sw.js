@@ -4,7 +4,7 @@
  * Forced Update Deployment Protocol
  */
 
-const APP_BUILD_ID = "20261104-0121";
+const APP_BUILD_ID = "20261104-0230";
 const CACHE_NAME = `kpax-dict-v${APP_BUILD_ID}`;
 
 const ASSETS_TO_CACHE = [

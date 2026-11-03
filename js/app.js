@@ -818,7 +818,7 @@
        ========================================================================== */
     setupPWA() {
       if ("serviceWorker" in navigator) {
-        const APP_BUILD_ID = "20261104-0121";
+        const APP_BUILD_ID = "20261104-0230";
         window.addEventListener("load", () => {
           navigator.serviceWorker.register("./sw.js?v=" + APP_BUILD_ID).then(reg => {
             document.addEventListener("visibilitychange", () => {
