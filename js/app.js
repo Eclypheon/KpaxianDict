@@ -34,6 +34,18 @@
     return;
   }
 
+  // Disable pinch-to-zoom gestures
+  if (typeof document !== 'undefined') {
+    document.addEventListener('gesturestart', (e) => e.preventDefault());
+    document.addEventListener('gesturechange', (e) => e.preventDefault());
+    document.addEventListener('gestureend', (e) => e.preventDefault());
+    document.addEventListener('touchmove', (e) => {
+      if (e.touches && e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+  }
+
   const DICTIONARY_SOURCE = (typeof window !== "undefined" && window.KPAXIAN_DICTIONARY) 
     ? window.KPAXIAN_DICTIONARY 
     : [];
@@ -806,10 +818,26 @@
        ========================================================================== */
     setupPWA() {
       if ("serviceWorker" in navigator) {
+        const APP_BUILD_ID = "20261104-0121";
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("./sw.js").catch(err => {
+          navigator.serviceWorker.register("./sw.js?v=" + APP_BUILD_ID).then(reg => {
+            document.addEventListener("visibilitychange", () => {
+              if (document.visibilityState === "visible") {
+                reg.update().catch(() => {});
+              }
+            });
+            setInterval(() => reg.update().catch(() => {}), 60000);
+          }).catch(err => {
             console.warn("ServiceWorker registration skipped:", err);
           });
+        });
+
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+          if (!refreshing) {
+            refreshing = true;
+            window.location.reload();
+          }
         });
       }
 

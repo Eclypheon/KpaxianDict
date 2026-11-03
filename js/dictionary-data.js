@@ -49,8 +49,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "stutudo",
     "ipa": "/stʊˈtuːdoʊ/",
     "partOfSpeech": "verb",
-    "definition": "To compose, type, write, or express thought through rhythmic tentacle pulsing.",
-    "extendedDefinition": "Refers specifically to the tactile generation of symbols, whether on bio-resonant holographic keys or physical stone engraving. Conveying intellectual or emotional output through motor tentacles.",
+    "definition": "The percussive, rhythmic tapping of suction tips on resonant basalt slabs; by extension, typing or composing dispatches.",
+    "extendedDefinition": "Ancient bards communicated epic chronicles by drumming their eight suction tips on hollowed volcanic stones at specific metric tempos. With the advent of holographic slates, the percussive meter remained unchanged.",
     "conjugations": {
       "present": "stutudo",
       "continuous": "stutudo-ing...",
@@ -60,7 +60,7 @@ const KPAXIAN_DICTIONARY = [
       "passive": "stutudoed ting (composed message)"
     },
     "etymology": "Onomatopoeic derivation mimicking the rapid percussive tap of eight suction tips on crystalline terminals in Olde K-PAXian command centers.",
-    "researchNotes": "Artifact fragment K-991 recovered from deep space probe telemetry (dated 4 March 2021). The recurring suffix '-ing...' indicates ongoing cognitive friction prior to actual transmission.",
+    "researchNotes": "Recovered from acoustic resonance chambers in Sector 4. Linguists continue to dispute whether \"stutudo\" was strictly onomatopoeic or derived from the mathematical root for \"octal calculation\".",
     "examples": [
       {
         "kpaxian": "alien is stutudo-ing in the private orbit.",
@@ -306,16 +306,17 @@ const KPAXIAN_DICTIONARY = [
     "word": "ded",
     "ipa": "/dɛd/",
     "partOfSpeech": "adjective / verb",
-    "definition": "Destroyed, erased, deleted, powered off, expired, or non-functional.",
-    "extendedDefinition": "Denotes the cessation of energetic cohesion. When a message is deleted, it 'went ded :C'. When an alien session is terminated, it is 'made ded'.",
+    "definition": "Total biological cessation, thermodynamic stillness, or the state of a crystal terminal whose stored ionic charge has completely depleted.",
+    "extendedDefinition": "K-PAXian metaphysics treats death not as an opposite to life, but as an extended planetary torpor. Curators debate whether ancient K-PAXians made any conceptual distinction between terminal death, deep slumber, and a disconnected communication terminal.",
     "conjugations": {
       "state": "ded",
       "verbTransitive": "make it ded (delete it / eliminate)",
       "verbIntransitive": "went ded (was erased / ceased)",
-      "absolute": "always ded (permanently disabled)"
+      "absolute": "always ded (permanently disabled)",
+      "tech_state": "crystal is ded (battery depleted / offline)"
     },
     "etymology": "Shortened form of Terran 'dead', stripped of mortality superstition and applied purely to data packets and energy fields.",
-    "researchNotes": "Encountered in the terminal shutdown sequence of the flagship *Nebula Grazer* (recovered 3 May 2019).",
+    "researchNotes": "Carved on basalt grave markers near Mount Stutudo. Inscriptions frequently declare entities as \"temporarily ded until the next stellar dawn\", confounding archaeologists who cannot determine whether the subjects were sleeping or deceased.",
     "examples": [
       {
         "kpaxian": "ting went ded before tentacles could absorb it :C",
@@ -340,17 +341,17 @@ const KPAXIAN_DICTIONARY = [
   {
     "id": "aliv",
     "word": "aliv!",
-    "ipa": "/əˈlaɪv/",
+    "ipa": "/əˈlaɪv!/ [scholarly debate: click vs. glottal stop]",
     "partOfSpeech": "adjective",
-    "definition": "Powered on, functioning, energized, awake, transmitting successfully.",
-    "extendedDefinition": "The antithesis of ded. Applied to active toggle switches, flourishing flora, and orbital relays operating at optimal capacitive resonance.",
+    "definition": "The vibrant state of biological vitality, bio-luminescence, or active psychic resonance.",
+    "extendedDefinition": "Denotes conscious animation across flora, fauna, and awakened crystalline relays. Scholars remain fiercely divided on the trailing exclamation mark: is it an orthographic alveolar suction click indigenous to Olde K-PAXian, an explosive glottal pulse, or a borrowed punctuation mark absorbed from 20th-century Earth radio broadcasts?",
     "conjugations": {
       "state": "aliv!",
       "habitual": "always aliv! (permanently enabled)",
       "transition": "turned aliv! (switched on)"
     },
     "etymology": "Corrupted from early human telemetry signals broadcasting 'life signs verified'.",
-    "researchNotes": "Recorded from the power grid telemetry of the central solar arrays of K-PAX on 14 February 2025.",
+    "researchNotes": "Excavated from Artifact Stele K-401 at the Sunken Observatory of Zephyr. Researchers vigorously debate whether the trailing mark represents an indigenous alveolar suction click, an explosive glottal pulse, or borrowed punctuation from 20th-century Earth radio broadcasts.",
     "examples": [
       {
         "kpaxian": "the power crystal is turned aliv!",
@@ -484,15 +485,15 @@ const KPAXIAN_DICTIONARY = [
     "word": "pasties",
     "ipa": "/ˈpeɪstiz/",
     "partOfSpeech": "verb / noun",
-    "definition": "To paste from clipboard; adhered digital attachment; sticker adhesive.",
-    "extendedDefinition": "The tactile act of pressing copied memory crystals against a blank receptor field until the data adheres.",
+    "definition": "Triangular baked nutrient turnovers filled with crushed solar tubers and sweet subterranean moss paste.",
+    "extendedDefinition": "The staple field ration of K-PAXian surveyors. Highly prized for their crumbly crystalline crust. Scholars vigorously debate whether the name arose from native baking terminology (*p’as-ti*) or was humorously adopted from Cornish miners encountered during early covert expeditions to Earth.",
     "conjugations": {
       "action": "pasties :o",
       "past": "pasted",
       "continuous": "pasting"
     },
     "etymology": "Derived from the sticky tree sap of the K-PAXian Gloom-Pine, used historically to fasten parchment to tentacle bracelets.",
-    "researchNotes": "Cataloged on 7 October 2024 from the workbench of an ancient cybernetic craftsman in Sector 4.",
+    "researchNotes": "Petrified samples excavated at Mount Stutudo (dated circa 300 Orbits ago). Chemical analysis revealed trace levels of starch, sucrose, and mild luminescence that glows for hours after ingestion.",
     "examples": [
       {
         "kpaxian": "clon the ting and slap pasties :o into the chat.",
@@ -680,8 +681,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "EXTERMINATE",
     "ipa": "/ɪkˈstɜːrmɪneɪt/",
     "partOfSpeech": "verb / exclamation",
-    "definition": "Drastic full-session wipe, total deletion, complete purge of obsolete nodes.",
-    "extendedDefinition": "The ultimate administrative command. Uttered with fierce determination when all foreign connections, corrupt caches, or stale devices must be wiped from reality.",
+    "definition": "An absolute imperative demanding the complete, unconditional cessation, expulsion, or termination of an entity, process, or session.",
+    "extendedDefinition": "An unusually harsh lexical item in an otherwise gentle language. Linguists actively investigate whether this term originated during the Great Planetary Cleansing of Sector 4, or if ancient receivers accidentally tuned into 1963 BBC television transmissions of the Daleks.",
     "conjugations": {
       "commandAll": "EXTERMINATE ALL",
       "sadVariant": "EXTERMINATE :< (clear chat)",
@@ -689,7 +690,7 @@ const KPAXIAN_DICTIONARY = [
       "automatic": "auto-EXTERMINATE (auto-delete timer)"
     },
     "etymology": "Ancient battle-cry borrowed from early terrestrial broadcast dramas intercepted by deep-space radio dishes.",
-    "researchNotes": "Found stamped in red luminescent wax across decommissioned planetary server banks, 10 January 2026.",
+    "researchNotes": "Discovered etched deeply into iron airlocks at Crater Station 9. The aggressive serif engraving stands in sharp contrast to typical flowing K-PAXian script, leading the Curator Council to classify it as a suspected temporal anomaly.",
     "examples": [
       {
         "kpaxian": "EXTERMINATE all other alien equipments >:(",
@@ -868,16 +869,17 @@ const KPAXIAN_DICTIONARY = [
     "word": "basket",
     "ipa": "/ˈbæskɪt/",
     "partOfSpeech": "noun",
-    "definition": "A chat folder, category vessel, organized container for related connections.",
-    "extendedDefinition": "A woven digital compartment where related chats and channels are clustered for quick jumping and mental tidiness.",
+    "definition": "A flexible receptacle woven from dried bioluminescent meadow reeds, used to gently transport docile native fauna (such as bbychubis) back to residential moss burrows.",
+    "extendedDefinition": "While originally an indispensable agrarian vessel across K-PAXian hearths, the term was metaphorically adopted by modern planetary communicators to denote grouped collections of communication channels and thematic clusters.",
     "conjugations": {
       "singular": "basket",
       "plural": "baskets",
       "actionCreate": "make a kpax basket (create folder)",
-      "tags": "basket tags (folder tags)"
+      "tags": "basket tags (folder tags)",
+      "modern_tech": "connec basket (themed communication cluster)"
     },
     "etymology": "Derived from the woven reed hampers used by meadow foragers to sort different species of phosphorescent mushrooms.",
-    "researchNotes": "Appeared in municipal filing standards of the High Archives, 17 March 2024.",
+    "researchNotes": "Excavated from the Mimble Silt Beds (Sector 4). Archaeologists discovered several fossilized reed baskets lined with dried kelp, perfectly sized to cradle three bbychubis. Debates persist as to whether woven geometric weaves represented clan status or simply reinforced the handle.",
     "examples": [
       {
         "kpaxian": "make baskets for connec clusters and jump between them mefast!",
@@ -991,15 +993,15 @@ const KPAXIAN_DICTIONARY = [
     "word": "corna",
     "ipa": "/ˈkɔːrnə/",
     "partOfSpeech": "noun",
-    "definition": "Saved Messages; personal private alcove; sanctuary for cherished tings.",
-    "extendedDefinition": "A cozy, encrypted micro-dimension reserved for an individual's personal bookmarks, drafts, and hoarded bbychubi media.",
+    "definition": "A sheltered architectural alcove or storage nook carved into subterranean living caverns, reserved for ancestral tablets and relics.",
+    "extendedDefinition": "Traditionally the quietest corner of an extraterrestrial dwelling. Later adopted by the planetary communication network to designate local device caching, sandboxed directories, and private offline storage.",
     "conjugations": {
       "noun": "corna",
       "possessive": "mi lil corna (my Saved Messages)",
       "locative": "kept in corna"
     },
     "etymology": "Dialectal variant of English 'corner', conveying intimacy, safety, and modest seclusion.",
-    "researchNotes": "Deciphered from personal diary seals excavated in the residential sector of Alpha Outpost.",
+    "researchNotes": "Unearthed in domestic cave ruins at Lake Mimble. Each corna was lined with pulverized quartz to shield stored papyri from atmospheric humidity.",
     "examples": [
       {
         "kpaxian": "keep this important ting safe in mi lil corna.",
@@ -1171,8 +1173,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "fren cluster",
     "ipa": "/frɛn ˈklʌs.tər/",
     "partOfSpeech": "noun",
-    "definition": "A collective gathering of allied extraterrestrials; a group conversation or communal pod.",
-    "extendedDefinition": "K-PAXian society does not organize in rigid hierarchies but in fluid, telepathically synchronized clusters. A fren cluster shares telemetry, nutrient location coords, and collective emotional resonance.",
+    "definition": "A nomadic communal swarm or symbiotic family pod sharing shelter and telepathic resonance; adopted to mean a group communication channel.",
+    "extendedDefinition": "Extraterrestrials rarely dwell in solitude. A fren cluster migrates together, sleeps in interlocking circles, and synchronizes mental states. In communications networks, it designates a group chat.",
     "conjugations": {
       "singular": "fren cluster",
       "plural": "fren clusters",
@@ -1181,7 +1183,7 @@ const KPAXIAN_DICTIONARY = [
       "diminutive": "smol fren cluster (intimate pod)"
     },
     "etymology": "Compound of Old K-PAXian *fren* (symbiont) and *klust* (stellar hive node), attested in the orbital registers of the Third Dynasty.",
-    "researchNotes": "Discovered on 14 November 2022 inside a fossilized beacon pod retrieved from the Cydonia Basin. Council records indicate some clusters remained open for over 400 orbits without a single silence.",
+    "researchNotes": "Excavated communal dwelling floors showing spherical indentations arranged in tight circles of 5 to 12 resting positions.",
     "examples": [
       {
         "kpaxian": "join fren cluster mefast!",
@@ -1209,8 +1211,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "bbyalien",
     "ipa": "/ˈbeɪ.bi.eɪ.li.ən/",
     "partOfSpeech": "noun",
-    "definition": "A juvenile extraterrestrial entity; a newly admitted initiate or tender newcomer.",
-    "extendedDefinition": "Characterized by soft gelatinous head-domes and oversized curious eye stems. Bbyaliens are granted unconditional amnesty across all planetary sectors while learning basic stutudoing and grazing techniques.",
+    "definition": "A newly hatched gelatinous extraterrestrial juvenile, recognized by its transparent cranial dome and curious ocular stems.",
+    "extendedDefinition": "Bbyaliens undergo a 4-orbit larval stage where they cannot yet speak, communicating purely through soft bioluminescent blushes. They are protected under universal planetary sanctuary laws.",
     "conjugations": {
       "singular": "bbyalien",
       "plural": "bbyaliens",
@@ -1219,7 +1221,7 @@ const KPAXIAN_DICTIONARY = [
       "augmentative": "bbyalien-in-training"
     },
     "etymology": "Proto-Kpaxian *bhabha* (sacred spawn) synthesized with the 1950s Earth radio interception *alien*.",
-    "researchNotes": "Deciphered from nursery frescoes at the Sunken Observatory of Zephyr. Archaeological logs show elder aliens frequently gifted them miniature pasties to prevent tantrums.",
+    "researchNotes": "Nursery fresco discovered at the Sunken Observatory. Elders are depicted teaching bbyaliens how to pluck grass without bruising the tender rhizomes.",
     "examples": [
       {
         "kpaxian": "welcome new bbyaliens to K-PAX!",
@@ -1390,8 +1392,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "red orb",
     "ipa": "/rɛd ɔːrb/",
     "partOfSpeech": "noun",
-    "definition": "A pulsing crimson beacon; notification badge counter signaling unread transmissions.",
-    "extendedDefinition": "A floating spherical holographic light that hovers above terminals or icon clusters whenever unattended dispatches require immediate optic inspection. Can evoke intense excitement or panic.",
+    "definition": "A spherical bioluminescent spore emitted by warning lichen when atmospheric radiation spikes; adopted in digital HUDs as an unread notification counter.",
+    "extendedDefinition": "In natural habitats, red orbs float in gentle clusters above disturbed moss fields. Because their crimson glare evokes an instinctive urgency, K-PAXian software architects adopted their likeness as badge counters for pending telepathic dispatches.",
     "conjugations": {
       "singular": "red orb",
       "plural": "red orbs",
@@ -1399,7 +1401,7 @@ const KPAXIAN_DICTIONARY = [
       "diminutive": "lil red orb"
     },
     "etymology": "Derived from the ancient warning orbs installed atop defense spires in Olde K-PAX, later re-purposed for mundane message alerts.",
-    "researchNotes": "Discovered on holographic slate fragments at excavation site Gamma. The text advises: 'He who possesses fifty red orbs must either answer them or EXTERMINATE them.'",
+    "researchNotes": "Recorded in Field Log 29 at Cydonia Basin. Researchers originally thought the crimson orbs were defensive explosives before noticing young bbyaliens playfully batting them like balloons.",
     "examples": [
       {
         "kpaxian": "red orb count is MASSIV! clear the tings!",
@@ -1573,8 +1575,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "holo reel",
     "ipa": "/ˈhoʊ.loʊ riːl/",
     "partOfSpeech": "noun",
-    "definition": "A transient 24-hour holographic recording; an ephemeral visual dispatch or story.",
-    "extendedDefinition": "Ephemeral projections captured by sensory stalks and cast into the atmosphere. After 24 solar cycles, the photon envelope decays naturally into cosmic dust, leaving no permanent archival burden.",
+    "definition": "An ephemeral twilight projection cast above mineral plains to reenact folklore; adopted as transient 24-hour visual dispatches.",
+    "extendedDefinition": "During the Twin Moon Solstice, optical lanterns project glowing figures that dissipate as morning arrives. Modern network software emulates this temporal decay by deleting stories after one full planetary cycle.",
     "conjugations": {
       "singular": "holo reel",
       "plural": "holo reels",
@@ -1582,7 +1584,7 @@ const KPAXIAN_DICTIONARY = [
       "diminutive": "lil holo reel"
     },
     "etymology": "Portmanteau of interstellar *holo* (three-dimensional photon matrix) and ancient magnetic tape *reel*.",
-    "researchNotes": "Uncovered during the 2024 Cydonia Basin deep trench sweep. Most holo reels depicted playful bbychubis rolling down grassy hills or aliens snacking on pasties.",
+    "researchNotes": "Photonic focus lenses recovered from festival platforms at Lake Mimble. The quartz crystals retain faint refractive memory of ancient performances.",
     "examples": [
       {
         "kpaxian": "post a holo reel of the double sunset.",
@@ -1646,8 +1648,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "tentacle touch",
     "ipa": "/ˈtɛn.tə.kəl tʌtʃ/",
     "partOfSpeech": "noun",
-    "definition": "Biometric tactile authentication; fingerprint or capacitive suction pad scan.",
-    "extendedDefinition": "The biological whorls on each tentacle suction cup are completely unique across the galaxy. Pressing the cup against a crystal pad verifies identity instantly without cumbersome alphanumeric passwords.",
+    "definition": "The ceremonial interlocking of suction whorls to seal pacts; adopted into terminals as capacitive biometric verification.",
+    "extendedDefinition": "Because the capillary ridges on each suction tip are genetically immutable, pressing a tentacle against a warm surface has been the undisputed pledge of truth since the First Dynasty.",
     "conjugations": {
       "singular": "tentacle touch",
       "plural": "tentacle touches",
@@ -1655,7 +1657,7 @@ const KPAXIAN_DICTIONARY = [
       "action": "verify with tentacle touch"
     },
     "etymology": "Derived from the ancient greeting ritual where diplomat tentacles were clasped to seal treaties.",
-    "researchNotes": "Observed on lock mechanisms guarding the Royal Seed Banks in Sector 4. The sensors could detect micro-capillary pulses through three layers of sediment.",
+    "researchNotes": "Preserved treaty tablets from the Cydonia Basin bearing eight circular indentation seals. The papillary patterns remain legible under electron microscopy.",
     "examples": [
       {
         "kpaxian": "unlock terminal with gentle tentacle touch.",
@@ -1682,8 +1684,8 @@ const KPAXIAN_DICTIONARY = [
     "word": "beam code",
     "ipa": "/biːm koʊd/",
     "partOfSpeech": "noun",
-    "definition": "A 2D high-density optical glyph matrix; extraterrestrial QR code.",
-    "extendedDefinition": "Constructed from alternating microscopic reflective and absorptive tiles. When swept with a photon beam, it transfers complete planetary coordinates or authentication credentials in a microsecond.",
+    "definition": "A sacred geometric seal chiseled into stone portals to verify lineage through reflected starlight; adopted as optical 2D matrix glyphs.",
+    "extendedDefinition": "Historically, travelers held prism stones up to clan door-lintels to cast intricate dot-patterns. In modern communication terminals, these geometric grids serve as high-density optical verification matrices (QR codes).",
     "conjugations": {
       "singular": "beam code",
       "plural": "beam codes",
@@ -1691,7 +1693,7 @@ const KPAXIAN_DICTIONARY = [
       "receptive": "projecting beam code"
     },
     "etymology": "Engineered during the First Inter-Orbital Transit era to replace paper transit passes.",
-    "researchNotes": "Carved into the lintels of ancient airlocks at the Zephyr Launch Spires. Modern smartphones can effortlessly decode them as standard URLs.",
+    "researchNotes": "Door lintels excavated at the Zephyr Launch Spires. The geometric accuracy of the 2,000-year-old carvings matches modern millimeter laser etching.",
     "examples": [
       {
         "kpaxian": "scan alien beam code to enter web portal.",
@@ -2078,7 +2080,6 @@ const KPAXIAN_DICTIONARY = [
   }
 ];
 
-// Universal environment support (supports standard script tag and ES modules)
 if (typeof window !== "undefined") {
   window.KPAXIAN_DICTIONARY = KPAXIAN_DICTIONARY;
 }

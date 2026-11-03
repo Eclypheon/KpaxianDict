@@ -1,9 +1,12 @@
 /**
  * K-PAXian Dictionary - Service Worker
  * Enables 100% offline usage and rapid caching of PWA assets.
+ * Forced Update Deployment Protocol
  */
 
-const CACHE_NAME = "kpax-dict-v3";
+const APP_BUILD_ID = "20261104-0121";
+const CACHE_NAME = `kpax-dict-v${APP_BUILD_ID}`;
+
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -16,16 +19,17 @@ const ASSETS_TO_CACHE = [
   "./icons/icon.svg"
 ];
 
-// Install event
+// Install event - force immediate takeover
 self.addEventListener("install", (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS_TO_CACHE);
-    }).then(() => self.skipWaiting())
+    })
   );
 });
 
-// Activate event
+// Activate event - purge all outdated caches and claim clients
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
@@ -40,38 +44,27 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-// Fetch event (Stale-while-revalidate with cache fallback)
+// Fetch event - Stale-while-revalidate with cache fallback
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        fetch(event.request).then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200) {
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, networkResponse);
-            });
-          }
-        }).catch(() => {});
-        return cachedResponse;
-      }
-
-      return fetch(event.request).then((networkResponse) => {
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== "basic") {
-          return networkResponse;
+      const fetchPromise = fetch(event.request).then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200 && networkResponse.type === "basic") {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
         }
-
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        });
-
         return networkResponse;
-      }).catch(() => {
-        if (event.request.headers.get("accept")?.includes("text/html")) {
+      }).catch(() => {});
+
+      return cachedResponse || fetchPromise.then((res) => {
+        if (!res && event.request.headers.get("accept")?.includes("text/html")) {
           return caches.match("./index.html");
         }
+        return res;
       });
     })
   );
