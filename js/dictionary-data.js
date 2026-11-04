@@ -2134,6 +2134,363 @@ const KPAXIAN_DICTIONARY = [
       "nouns",
       "core"
     ]
+  },
+  {
+    "id": "mi",
+    "word": "mi",
+    "ipa": "/miː/",
+    "partOfSpeech": "pronoun",
+    "definition": "Self-referential singular pronoun denoting the localized conscious self (I, me, my, mine, myself).",
+    "extendedDefinition": "Deemed by K-PAXian logicians to be the absolute pinnacle of grammatical efficiency. Whereas Terran dialects burden speakers with complex case inflections (nominative, accusative, genitive, reflexive), 'mi' handles all self-telemetry in a single compact syllable without syntactic entropy.",
+    "conjugations": {
+      "nominative": "mi (I)",
+      "accusative": "mi (me)",
+      "genitive": "mi (my/mine)",
+      "reflexive": "mi-self / mi alone"
+    },
+    "etymology": "Derived from the ancient single-stroke glyph of the Zephyr Ridge representing the center of individual consciousness.",
+    "researchNotes": "Deciphered from the basalt stele of Kar-Tek. Scribes noted that attempting to translate human pronouns into K-PAXian caused linguistic translators to overheat, leading scholars to standardize on 'mi' for all personal reference.",
+    "examples": [
+      {
+        "kpaxian": "mi slpy mi want bedbed.",
+        "english": "I am tired and I want to rest on a bed."
+      },
+      {
+        "kpaxian": "that lil ting belongs to mi.",
+        "english": "That small object belongs to me."
+      }
+    ],
+    "synonyms": [
+      "self",
+      "ego",
+      "consciousness locus"
+    ],
+    "tags": [
+      "core",
+      "nouns",
+      "pronouns"
+    ]
+  },
+  {
+    "id": "mih",
+    "word": "mih",
+    "ipa": "/mɪx/ or /mɪh/",
+    "partOfSpeech": "verb",
+    "definition": "To experience psychic or emotional longing for an absent companion or partner; butchered loanword of Terran 'miss'.",
+    "extendedDefinition": "Not to be confused with the pronoun 'mi'. 'Mih' represents an involuntary drop in resonance frequency when a K-PAXian is separated by orbital distances from their primary bond. The terminal aspirated 'h' is articulated as a soft psychic exhalation of yearning.",
+    "conjugations": {
+      "present": "mih",
+      "continuous": "mihing",
+      "past": "mihed",
+      "intense": "MASSIV mih"
+    },
+    "etymology": "Phonetic distortion of the English verb 'miss', intercepted via early shortwave Terran broadcasts and assimilated into telepathic subtext.",
+    "researchNotes": "Recorded in private telepathic diaries excavated from Orbit Sector 9. While official planetary dogma preaches total detachment, biometric readings of subjects uttering 'mih' show significant thermal fluctuation around the core sensory node.",
+    "examples": [
+      {
+        "kpaxian": "mi mih the baobao so much.",
+        "english": "I miss my closest partner so much."
+      },
+      {
+        "kpaxian": "dark orbit brings quiet, now mi mih fren cluster.",
+        "english": "The dark orbit brings silence, now I miss my circle of friends."
+      }
+    ],
+    "synonyms": [
+      "long for",
+      "yearn",
+      "telepathic resonance drop"
+    ],
+    "tags": [
+      "feelings",
+      "emotions",
+      "verbs"
+    ]
+  },
+  {
+    "id": "dih",
+    "word": "dih",
+    "ipa": "/dɪk/ or /dɪh/",
+    "partOfSpeech": "noun",
+    "definition": "Anatomical reference to crude human reproductive genitalia, considered by K-PAXians to be an archaic and inefficient procreative method.",
+    "extendedDefinition": "Documented during preliminary orbital reconnaissance of Earth biology. K-PAXian geneticists, accustomed to seamless cellular budding and pristine cloning chambers ('clon'), viewed Terran reproductive mechanics with clinical bafflement and mild anatomical distaste.",
+    "conjugations": {
+      "singular": "dih",
+      "plural": "dihs",
+      "derogatory": "crude dih mechanics"
+    },
+    "etymology": "Phonetic transcription of Terran colloquial terminology recorded by planetary surveillance telemetry.",
+    "researchNotes": "Archival tablets in the High Spire of Zephyr describe 'dih' under the classification 'Biological Oddities of Primitive Sector 3'. Surveyors were formally instructed to divert visual telemetry when observing Terran mating rituals out of respect and aesthetic discomfort.",
+    "examples": [
+      {
+        "kpaxian": "terrans rely on dih mechanics for generation, truly inefficient when clon exists.",
+        "english": "Humans depend on crude physical genitalia for reproduction, which is remarkably inefficient compared to cloning."
+      }
+    ],
+    "synonyms": [
+      "terran anatomy",
+      "archaic reproductive organ"
+    ],
+    "tags": [
+      "biology",
+      "anatomy",
+      "nouns"
+    ]
+  },
+  {
+    "id": "tickled",
+    "word": "tickled",
+    "ipa": "/ˈtɪk.əld/",
+    "partOfSpeech": "adjective",
+    "definition": "A state of high delight, amusement, or psychic pleasure, metaphorically akin to mild tactile vibration.",
+    "extendedDefinition": "Unlike human laughter, which involves violent diaphragm contractions, a 'tickled' K-PAXian exhibits delicate, rapid micro-fluttering of the outer tentacle tips accompanied by an 11-14% increase in bioluminescent luminescence across the cranial dome.",
+    "conjugations": {
+      "base": "tickled",
+      "active": "tickling",
+      "superlative": "MASSIV tickled",
+      "diminutive": "lil tickled"
+    },
+    "etymology": "Observed when juvenile bbychubis encountered mild electrostatic atmospheric patches in the Phosphor Meadows, inducing involuntary tingling delight.",
+    "researchNotes": "Excavations at Lake Mimble recovered bronze resonance bells tuned specifically to trigger the 'tickled' affective state in diplomatic delegations.",
+    "examples": [
+      {
+        "kpaxian": "mi was MASSIV tickled by your dispatch!",
+        "english": "I was thoroughly delighted and amused by your message!"
+      },
+      {
+        "kpaxian": "the bbychubi is tickled after grazing the fresh pasture.",
+        "english": "The little creature is pleased and cheerful after feeding in the meadow."
+      }
+    ],
+    "synonyms": [
+      "amused",
+      "delighted",
+      "pleased",
+      "bioluminescent glow"
+    ],
+    "tags": [
+      "feelings",
+      "emotions",
+      "adjectives"
+    ]
+  },
+  {
+    "id": "not_understand_c",
+    "word": "not understand :C",
+    "ipa": "/nɒt ˌʌn.dəˈstænd ˈkoʊ.lən siː/",
+    "partOfSpeech": "phrase",
+    "definition": "Formal declaration of total epistemic failure or profound bewilderment, invariably inscribed with an exaggerated down-turned mouth symbol.",
+    "extendedDefinition": "When carved or transmitted, this phrase is mandatorily accompanied by the glyph ':C'. Because K-PAXians possess no innate facial muscles for frowning, early scribes meticulously mimicked the severe, furrowed facial distortion of a perplexed Terran explorer, enshrining it as an iconic herald of unresolvable confusion.",
+    "conjugations": {
+      "standard": "not understand :C",
+      "amplified": "MASSIV not understand :C",
+      "interrogative": "u not understand :C?"
+    },
+    "etymology": "Forensic semiotics trace this to first contact with a shipwrecked Terran surveyor whose facial contortions were carved into stone tablets as an intellectual symbol.",
+    "researchNotes": "Discovered in the Basalt Caverns of Mount Mimble. Anthropologists noted that K-PAXian initiates will attempt to physically shape their gelatinous facial perimeters into a ':C' curve when presenting unsolvable equations to planetary mentors.",
+    "examples": [
+      {
+        "kpaxian": "mi read the cosmic telemetry and mi not understand :C.",
+        "english": "I examined the orbital telemetry and I am completely baffled :C."
+      },
+      {
+        "kpaxian": "terran social rituals? MASSIV not understand :C.",
+        "english": "Human behavioral customs? Utterly incomprehensible :C."
+      }
+    ],
+    "synonyms": [
+      "baffled",
+      "incomprehensible",
+      "epistemic void",
+      "confused"
+    ],
+    "tags": [
+      "communication",
+      "interjections",
+      "feelings"
+    ]
+  },
+  {
+    "id": "no_meow_meow_okay",
+    "word": "no meow meow okay?",
+    "ipa": "/noʊ ˈmjaʊ mjaʊ oʊˈkeɪ/",
+    "partOfSpeech": "phrase",
+    "definition": "A soothing ritual directive deployed to pacify agitated K-PAXians or overstimulated bbychubis trapped in a repetitive acoustic vocalization loop.",
+    "extendedDefinition": "Young fauna and distressed adult K-PAXians periodically succumb to runaway resonance feedback termed the 'meow cycle'—an acoustic purge of sensory overload. This phrase acts as a gentle frequency dampener, signaling safe harbor and commanding immediate vocal stillness.",
+    "conjugations": {
+      "imperative": "no meow meow okay?",
+      "whispered": "shhh no meow meow okay?",
+      "affirmation": "okae no meow meow"
+    },
+    "etymology": "Derived from Nursery Spire harmonic protocols combined with early intercepted Terran radio confirmations ('okay').",
+    "researchNotes": "Recorded on crystalline audio cylinders from the Cydonia Hatchery. Acoustic analysis confirms that uttering this phrase with a falling terminal inflection at 432 Hz immediately reduces bbychubi respiration rates by 40%.",
+    "examples": [
+      {
+        "kpaxian": "hush lil ting, no meow meow okay? sleep sleep now.",
+        "english": "Quiet little one, cease your crying all right? Rest now."
+      },
+      {
+        "kpaxian": "fren is in panic loop, mi must say: no meow meow okay?",
+        "english": "My friend is stuck in an emotional loop; I must calm them down."
+      }
+    ],
+    "synonyms": [
+      "hush",
+      "calm down",
+      "vocal damping command"
+    ],
+    "tags": [
+      "communication",
+      "imperative",
+      "social",
+      "acoustics"
+    ]
+  },
+  {
+    "id": "soup_soup",
+    "word": "soup soup",
+    "ipa": "/suːp suːp/",
+    "partOfSpeech": "noun",
+    "definition": "A rare, highly esteemed warm fluid sustenance brought to K-PAX by ancient orbital expeditions; specifically denotes creamy Terran mushroom soup.",
+    "extendedDefinition": "While native K-PAXian biology primarily grazes acoustic pasture vibrations, the discovery of thick thermal broth during historical Earth surveys revolutionized high-table gastronomy. The duplication of 'soup' denotes superlative viscosity, rich fungal aroma, and ceremonial prestige.",
+    "conjugations": {
+      "singular": "soup soup",
+      "prepared": "warm soup soup",
+      "portion": "bowl of soup soup",
+      "craving": "need soup soup"
+    },
+    "etymology": "Replication of Terran culinary terminology discovered in sealed emergency thermal rations aboard recovered expedition craft.",
+    "researchNotes": "Excavated from the galley lockers of the scout vessel Zephyr IV. Chemical residue verified traces of Agaricus bisporus and lipid emulsions. Recreated on K-PAX only during solstices and honored diplomatic summits.",
+    "examples": [
+      {
+        "kpaxian": "after a freezing dark orbit, nothing restores mi like warm soup soup.",
+        "english": "After a frigid planetary night, nothing rejuvenates me like hot mushroom soup."
+      },
+      {
+        "kpaxian": "the high elders shared a bowl of soup soup at the equinox feast.",
+        "english": "The council elders shared a ceremonial bowl of mushroom soup during the equinox banquet."
+      }
+    ],
+    "synonyms": [
+      "mushroom broth",
+      "fluid sustenance",
+      "delicacy"
+    ],
+    "tags": [
+      "nutrition",
+      "nouns",
+      "lore"
+    ]
+  },
+  {
+    "id": "baobao",
+    "word": "baobao",
+    "ipa": "/baʊˈbaʊ/",
+    "partOfSpeech": "noun",
+    "definition": "1. The most cherished companion or soul-bonded partner. 2. (verb) The intimate bilateral intertwining of tentacles within a protective corna, equivalent to a warm embrace.",
+    "extendedDefinition": "Depending on pitch cadence, 'baobao' functions as an intimate noun of address or the highest physical demonstration of solace. When two K-PAXians share a corna, wrapping their appendages together generates measurable localized warmth and harmonizes their psychic frequencies.",
+    "conjugations": {
+      "noun": "the baobao",
+      "verb present": "baobaoing",
+      "verb past": "baobaoed",
+      "diminutive": "lil baobao"
+    },
+    "etymology": "Linguistic root originating from ancient nursery resonance murmurs, later identified in magnetic audio archives of the Sunken Conservatory.",
+    "researchNotes": "Acoustic cylinders from the Sunken Conservatory of Zephyr demonstrate two clear tonal inflections: a falling tone for the partner ('baobao'), and a rising-falling arc when designating the physical entanglement of tentacles during high distress.",
+    "examples": [
+      {
+        "kpaxian": "mi provide corna, then we baobao until the storm passes.",
+        "english": "I provide the sanctuary, then we embrace tightly until the tempest clears."
+      },
+      {
+        "kpaxian": "where is mi baobao? the orbit is cold without u.",
+        "english": "Where is my cherished companion? This planetary cycle is cold without you."
+      }
+    ],
+    "synonyms": [
+      "soul companion",
+      "beloved",
+      "tentacle embrace",
+      "hug"
+    ],
+    "tags": [
+      "social",
+      "feelings",
+      "nouns",
+      "verbs"
+    ]
+  },
+  {
+    "id": "bedbed",
+    "word": "bedbed",
+    "ipa": "/ˈbɛd.bɛd/",
+    "partOfSpeech": "noun",
+    "definition": "A resilient, woven resting apparatus engineered from dried reed fibers and inertial dampeners, designed for rolling and somnolence.",
+    "extendedDefinition": "Constructed from the braided stalks of luminescent valley reeds, the bedbed provides optimal acoustic damping and hydrostatic cushion. K-PAXians roll upon it horizontally to discharge static accumulation and replenish their energy matrices.",
+    "conjugations": {
+      "singular": "bedbed",
+      "plural": "bedbeds",
+      "action": "roll in bedbed",
+      "state": "bedbed mode"
+    },
+    "etymology": "Iterative compounding of intercepted Terran 'bed', doubled to signify enhanced physical comfort and structural reinforcement.",
+    "researchNotes": "Petroglyphs across the Western Plains illustrate exhausted surveyors dismounting orbital gliders and immediately tumbling into cylindrical woven bedbeds. Laboratory tests confirm the weave absorbs 99.4% of seismic vibrations.",
+    "examples": [
+      {
+        "kpaxian": "mi energy low, entering bedbed immediately.",
+        "english": "My energy reserves are depleted; I am getting into bed immediately."
+      },
+      {
+        "kpaxian": "woven bedbed soft like meadow moss, zero gravity ready.",
+        "english": "The woven bed is as soft as pasture moss and equipped for weightless sleep."
+      }
+    ],
+    "synonyms": [
+      "woven cot",
+      "rest apparatus",
+      "sleeping nest"
+    ],
+    "tags": [
+      "structures",
+      "nouns",
+      "life"
+    ]
+  },
+  {
+    "id": "lobster",
+    "word": "lobster",
+    "ipa": "/ˈlɒb.stər/",
+    "partOfSpeech": "noun",
+    "definition": "A brass-and-chitin biometric scanning apparatus with twin grasping sensor claws, used to catalog and decipher foreign facial expressions and bbychubi moods.",
+    "extendedDefinition": "Dubbed 'lobster' by Terran contact teams due to its twin articulated sensor appendages and segmented carapace. Because K-PAXians evolved beyond facial emotional displays, this apparatus is indispensable for scanning subtle pupil micro-dilations, skin flushing, and brow furrows of alien species.",
+    "conjugations": {
+      "singular": "lobster",
+      "plural": "lobsters",
+      "operational": "lobster scanning",
+      "diagnostic": "lobster analysis"
+    },
+    "etymology": "Borrowed from Terran marine taxonomy when early astronauts noted the scanning probe's uncanny resemblance to an Earth decapod crustacean.",
+    "researchNotes": "Diplomatic curricula discovered at the High Spire mandate that all interstellar ambassadors complete 500 rotations of 'lobster' biometric interpretation before receiving authorization for extraterrestrial contact.",
+    "examples": [
+      {
+        "kpaxian": "deploy the lobster scanner; the terran emissary is twitching their brow.",
+        "english": "Activate the facial scanning probe; the human envoy is twitching their eyebrow."
+      },
+      {
+        "kpaxian": "lobster reports bbychubi is 94% content and ready for grazing.",
+        "english": "The diagnostic scanner reports the young creature is 94% satisfied and ready to feed."
+      }
+    ],
+    "synonyms": [
+      "biometric scanner",
+      "expression decoder",
+      "chitin sensor"
+    ],
+    "tags": [
+      "tech",
+      "diplomacy",
+      "nouns"
+    ]
   }
 ];
 
